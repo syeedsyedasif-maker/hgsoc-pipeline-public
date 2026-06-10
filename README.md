@@ -47,7 +47,7 @@ Latest runs, both 7/7 PASS:
 
 ### Option A: local R (R 4.3.x with Bioconductor 3.18)
 ```r
-# from inside sim_pipeline/
+# from the repo root
 Rscript install.R          # core packages (binaries; no compiler needed)
 # (optional) INSTALL_OPTIONAL=1 Rscript install.R   # also build inferCNV/BayesPrism/RCTD
 Rscript run_all.R tiny     # about 7 min: runs all three named tools end to end
@@ -112,6 +112,9 @@ population it has no reference for, and prints the missed fraction (about 8%).
   contributes, not the raw fraction of cells, because cell types carry different amounts of mRNA. We
   score against the expression-fraction truth (`results/03_true_fractions.csv`). 120 patients is a
   demonstration of the machinery, not a powered survival study.
+
+  ![Estimated versus true cell-type fractions](figs/03_fraction_scatter.png)
+  *Estimated versus true cell-type fractions, one panel per cell type. Points near the diagonal mean accurate recovery.*
 - `04`, `figs/04_spatial_maps.png`: planted versus inferred malignant and CAF maps. CAF should light
   up the desmoplastic core. The PASS test is a permutation test asking whether inferred CAF is
   concentrated in the malignant-dense core versus the equally-malignant margin. The raw
@@ -188,6 +191,9 @@ budget at this scale, so it is recorded as "did not complete" and the InstaPrism
 is a hypothesis test, not a build gate. The separation depends on the platform mismatch being
 substantial; that setting is recorded in `truth/benchmark_notes.md`. See also `figs/03b_benchmark.png`.
 Run it with `SIM_PROFILE=medium Rscript 03b_deconv_benchmark.R`.
+
+![Comparative deconvolution benchmark](figs/03b_benchmark.png)
+*Mean Pearson for each method on the pseudobulk bulk and the independent-draw bulk.*
 
 ---
 
