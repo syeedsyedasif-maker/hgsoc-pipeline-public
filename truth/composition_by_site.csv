@@ -1,0 +1,13 @@
+"site","celltype","Freq"
+"ascites","adipocyte",9
+"omental","adipocyte",234
+"ascites","endothelial",96
+"omental","endothelial",149
+"ascites","fibroblast",197
+"omental","fibroblast",438
+"ascites","macrophage",220
+"omental","macrophage",203
+"ascites","malignant",794
+"omental","malignant",810
+"ascites","Tcell",212
+"omental","Tcell",138

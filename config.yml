@@ -1,0 +1,164 @@
+# ============================================================================
+# config.yml — ALL pipeline parameters in one place.
+# Two profiles: `default` (full, ~minutes) and `tiny` (fast smoke test).
+# `tiny` only overrides the keys it lists; everything else inherits `default`.
+# Select with env var SIM_PROFILE=tiny (run_all.R / scripts read it).
+# ============================================================================
+
+default:
+  seed: 1000          # global seed; each script also re-seeds from this
+  threads: 1          # single-threaded => reproducible. Raise to use more cores.
+
+  sizes:
+    n_genes: 2000
+    n_cells: 3500
+    spatial_grid: 30        # spatial slide is grid x grid spots
+    n_patients: 120         # Aim 3 survival cohort (DEMO size, not powered)
+    cells_per_patient: 800  # single cells summed into each patient pseudobulk
+    cells_per_spot: 6       # approx cells summed into each spatial spot
+
+  # Overall splatter group proportions (MUST sum to 1). ~45% malignant.
+  group_prob:
+    malignant_ascites: 0.22
+    malignant_omental: 0.23
+    fibroblast:        0.18
+    macrophage:        0.12
+    endothelial:       0.08
+    Tcell:             0.10
+    adipocyte:         0.07
+
+  # For SHARED (non-malignant) types: P(cell is from omental site); rest = ascites.
+  # Malignant groups are site-bound by construction and ignore this.
+  site_omental_prob:
+    fibroblast:  0.70   # CAF-rich omentum
+    macrophage:  0.50
+    endothelial: 0.60
+    Tcell:       0.40
+    adipocyte:   0.95   # fat == omentum
+
+  splatter:
+    de_prob:     0.15   # baseline identity DE prob (makes every type distinct)
+    de_facLoc:   0.80   # baseline identity DE magnitude (log scale) -- high enough
+                        # that cell types are genuinely distinguishable (real
+                        # lineages share housekeeping genes but differ strongly
+                        # in markers; weak DE makes deconvolution ill-conditioned)
+    de_facScale: 0.40
+    # malignant_omental overrides -> the recoverable RESISTANCE programme (Aim 2)
+    omental_de_prob:   0.25
+    omental_de_facLoc: 1.20   # stronger than baseline so resistance stands out
+
+  truth:
+    resistance_log2fc_threshold: 0.585   # log2(1.5): gene is "resistance" if
+                                          # |log2(DEfac_omental/DEfac_ascites)| >= this
+
+  cnv:                  # clonal CNVs carried by BOTH malignant groups; stroma diploid
+    gain_factor: 2.0    # strong, to beat splatter noise
+    loss_factor: 0.5
+    gains:  ["1q", "8q", "3q", "20q"]
+    losses: ["8p", "17p", "4q", "13q"]
+
+  confounds:            # realism toggles (Hippen 2023 deconvolution artifacts)
+    batch_shift:        # sc reference != bulk/spatial assay batch
+      enabled: true
+      sd: 0.40          # sd of per-gene log-normal multiplier on bulk/spatial only
+    mrna_enrichment:    # poly-A capture vs rRNA depletion
+      enabled: true
+      subset_frac: 0.15 # fraction of genes "captured" / overrepresented in bulk
+      factor: 2.5
+    adipocyte_blindspot: # dissociation loss
+      enabled: true     # adipocyte in bulk+spatial, ABSENT from sc reference
+
+  deconvolution:
+    markers_per_type: 50   # informative marker genes kept per cell type (NNLS)
+
+  survival:
+    use_simsurv: true   # false -> hand-rolled exponential-hazard fallback
+    baseline_hazard: 0.01  # tuned so ~30% are censored at max_followup
+    beta_malignant: 2.0 # higher malignant fraction -> higher hazard
+    beta_caf: 1.2       # higher CAF fraction -> higher hazard
+    max_followup: 60    # months (administrative censoring)
+    dirichlet_alpha: 5  # concentration of per-patient composition draws
+
+  spatial:
+    core_radius_frac: 0.30   # desmoplastic core radius (fraction of grid)
+    core_caf_boost: 3.0      # CAF enriched in core
+    margin_caf_depletion: 0.20
+    n_permutations: 999
+
+  tools:                # false => clearly-labelled [FALLBACK]; true => named tool
+    # All three named tools ARE installed and were validated end-to-end on the
+    # `tiny` profile (7/7 PASS: inferCNV + BayesPrism + RCTD). At FULL scale in
+    # this environment, however:
+    #   - inferCNV   : ~5 min, works fine (ARI 0.99)         -> PRIMARY by default
+    #   - BayesPrism : ~2.5 h single-threaded on 120 patients -> too slow for the
+    #                  "few minutes" default; enable for a real run if you have time
+    #                  (raise `threads`) — result matches the NNLS fallback closely.
+    #   - RCTD       : runs out of memory on the 30x30 (900-spot) grid here ->
+    #                  use it on `tiny`, or shrink spatial_grid, or use more RAM.
+    # So the full default keeps the fast, practical mix. Flip these on as needed;
+    # the `tiny` profile runs all three named tools in ~7 min.
+    use_infercnv:   true    # PRIMARY: infercnv (needs JAGS; auto-detected via ensure_jags)
+    use_bayesprism: false   # installed; PRIMARY on `tiny` (slow at full scale -> fallback)
+    use_rctd:       false   # installed; PRIMARY on `tiny` (OOM at full scale -> fallback)
+
+  thresholds:           # PASS/FAIL gates per stage
+    ari_min: 0.70
+    f1_min: 0.70
+    decon_pearson_min: 0.70
+    spatial_p_max: 0.05
+
+  # ---- Aim-3 COMPARATIVE deconvolution benchmark (03b; not a build gate) ----
+  # Tests the Hippen-2023 claim: naive methods look great on pseudobulk but
+  # degrade when the bulk is an INDEPENDENT draw; BayesPrism is more robust.
+  benchmark:
+    independent_batch_facLoc: 0.70   # splatter per-gene batch shift on the target;
+    independent_batch_facScale: 0.50 # substantial = realistic scRNA-vs-bulk platform gap
+                                      # (a negligible shift would not test mismatch at all)
+    target_group_prob:               # DIFFERENT composition for the independent bulk
+      malignant_ascites: 0.15
+      malignant_omental: 0.18
+      fibroblast:        0.27
+      macrophage:        0.10
+      endothelial:       0.12
+      Tcell:             0.13
+      adipocyte:         0.05
+    drop_from_reference: ["adipocyte", "endothelial"]  # in bulk, absent from ref
+    n_bulk: 80                       # benchmark bulk samples per condition
+    cells_per_bulk: 400              # single cells summed into each bulk sample
+    ref_cells_per_type: 150          # downsample reference for the engines
+    markers_per_type: 50
+    time_budget_sec: 900             # per method; else "did not complete"
+    methods:
+      nnls:       true   # naive baseline (already in repo)
+      music:      true   # naive comparator (skipped gracefully if it won't build)
+      instaprism: true   # fast BayesPrism-equivalent (iteration engine)
+      bayesprism_confirm: false  # true BayesPrism DID NOT finish in budget at medium
+                                 # scale (>900s/condition); InstaPrism is the engine used.
+                                 # Flip true only if you have time/RAM to confirm.
+
+# ---- fast smoke-test profile: only size overrides (still ~1 min) ----
+# (n_genes kept reasonably high so the CNV windowing in Aim 1 has enough
+#  genes per chromosome to resolve aneuploidy.)
+tiny:
+  sizes:
+    n_genes: 1000
+    n_cells: 900
+    spatial_grid: 16
+    n_patients: 50
+    cells_per_patient: 250
+    cells_per_spot: 6
+  tools:                  # tiny is small enough to run ALL THREE named tools (~7 min)
+    use_infercnv:   true
+    use_bayesprism: true  # tractable at this size (slow only at full scale)
+    use_rctd:       true  # fits in memory at this grid size
+
+# ---- medium profile: develop/iterate the 03b deconvolution benchmark here ----
+# (bigger than tiny, far cheaper than default; 00-04 also run on it if desired)
+medium:
+  sizes:
+    n_genes: 1500
+    n_cells: 2500
+    spatial_grid: 20
+    n_patients: 80
+    cells_per_patient: 400
+    cells_per_spot: 5
