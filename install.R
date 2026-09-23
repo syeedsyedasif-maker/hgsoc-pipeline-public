@@ -27,7 +27,7 @@ bioc_pkgs <- c("splatter", "SingleCellExperiment", "SummarizedExperiment",
                "scater", "scran", "bluster", "igraph", "matrixStats")
 
 need <- function(p) !requireNamespace(p, quietly = TRUE)
-for (p in cran_pkgs) if (need(p)) install.packages(p, type = "binary")
+for (p in cran_pkgs) if (need(p)) install.packages(p)
 for (p in bioc_pkgs) if (need(p)) BiocManager::install(p, ask = FALSE, update = FALSE)
 
 # 3. OPTIONAL primary tools (opt in via INSTALL_OPTIONAL=1) -------------------
@@ -35,12 +35,12 @@ for (p in bioc_pkgs) if (need(p)) BiocManager::install(p, ask = FALSE, update = 
 if (Sys.getenv("INSTALL_OPTIONAL") == "1") {
   message(">> Installing optional primary tools (need Rtools + JAGS)...")
   # Seurat & inferCNV require Matrix >= 1.6.4 (newer than the one shipped with R 4.3.1)
-  if (utils::packageVersion("Matrix") < "1.6.4") install.packages("Matrix", type = "binary")
-  if (need("Seurat")) install.packages("Seurat", type = "binary")   # inferCNV import
+  if (utils::packageVersion("Matrix") < "1.6.4") install.packages("Matrix")
+  if (need("Seurat")) install.packages("Seurat")   # inferCNV import
   # inferCNV (+ rjags, which links to JAGS at load time)
   BiocManager::install(c("rjags", "infercnv"), ask = FALSE, update = FALSE)
   # BayesPrism's fiddliest deps first, then the two GitHub packages
-  for (p in c("snowfall", "gplots")) if (need(p)) install.packages(p, type = "binary")
+  for (p in c("snowfall", "gplots")) if (need(p)) install.packages(p)
   for (p in c("NMF", "BiocParallel")) if (need(p)) BiocManager::install(p, ask = FALSE, update = FALSE)
   if (need("remotes")) install.packages("remotes")
   try(remotes::install_github("Danko-Lab/BayesPrism/BayesPrism", upgrade = "never"))

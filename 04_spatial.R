@@ -55,7 +55,18 @@ comp_region <- list(
                  endothelial = 0.10, Tcell = 0.25, adipocyte = 0.05),
   background = c(malignant = 0.05, fibroblast = 0.10, macrophage = 0.20,
                  endothelial = 0.15, Tcell = 0.20, adipocyte = 0.30))
-comp_region <- lapply(comp_region, function(v) v[types_all])   # align order
+# Align to the cell types actually present in this sce (types_all) and
+# renormalise to sum to 1. This matters on real data (GSE165897), which has
+# no adipocyte cell type at all: subsetting to types_all silently drops that
+# entry, and the remaining 5 weights no longer sum to 1 unless rescaled here
+# explicitly. (It previously self-corrected only via the per-spot noise
+# renormalisation two steps downstream -- numerically fine, but implicit.)
+# No-op on synthetic profiles, where adipocyte IS in types_all and each
+# vector already sums to 1.
+comp_region <- lapply(comp_region, function(v) {
+  v <- v[intersect(names(v), types_all)]
+  v / sum(v)
+})
 
 # ---- 2. build spot expression by summing sampled cells ----------------------
 ns <- nrow(coords); ncps <- cfg$sizes$cells_per_spot

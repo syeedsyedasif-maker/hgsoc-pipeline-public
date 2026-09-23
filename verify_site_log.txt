@@ -1,0 +1,154 @@
+There were 13 warnings (use warnings() to see them)
+Warning message:
+package ‘yaml’ was built under R version 4.3.3 
+loading data/sce_site_comparison.rds (large; uncompressed) ...
+loaded in 9.2 min
+
+=== ASSAY REPRESENTATION (the on-disk size question) ===
+  counts     class=dgCMatrix    dim=21650 x 700227  nnz=1,679,396,225  size=20.2 GB
+  logcounts  class=dgCMatrix    dim=21650 x 700227  nnz=1,679,396,225  size=33.8 GB
+  colData size: 0.36 GB
+  TOTAL object: 54.4 GB   |  file on disk: 147.0 GB
+
+=== STEP 7 VERIFICATION ===
+
+-- table(sce$celltype) --
+
+endothelial  fibroblast  macrophage   malignant       Tcell 
+      18021      146570      166895      207263      161478 
+
+-- table(sce$site) --
+
+ascites omental   other 
+  71810  159344  469073 
+
+-- table(sce$cell_subtype) --
+
+        Cancer.cell.1    Activated.CAF.TGFb            M2.SELENOP 
+                93598                 71529                 53759 
+      CD8.T.cytotoxic           CD4.T.naive              M2.MARCO 
+                49722                 44767                 33336 
+        Cancer.cell.2             M1.S100A8             CD4.T.reg 
+                33169                 27942                 23702 
+  Mesothelial.CAF.IL1 Cycling.cancer.cell.2             M2.CXCL10 
+                23368                 21314                 19955 
+            CD8.T.ISG         Cancer.cell.3         Cancer.cell.6 
+                18534                 17954                 17374 
+Cycling.cancer.cell.1             Cycling.M    Activated.CAF.IGF1 
+                17174                 16686                 13704 
+       Angiogenic.CAF            Clearing.M          CD8.T.CXCL13 
+                13210                 12643                 12584 
+    Activated.CAF.ISG           Cycling.CAF          CD4.T.CXCL13 
+                 8936                  8075                  7794 
+          Early.CAF.1             Venous.EC         Cancer.cell.4 
+                 5558                  5379                  4496 
+          Arterial.EC              CD4.Th17          Quiescent.EC 
+                 4468                  4375                  2303 
+          Early.CAF.2         Cancer.cell.5           Vascular.EC 
+                 2190                  2184                  1833 
+            M2.COL1A1          Sprouting.EC               M2.MMP9 
+                 1638                  1063                   936 
+     Microvascular.EC            Cycling.EC               CD36.EC 
+                  770                   690                   670 
+         Lymphatic.EC          Migrating.EC 
+                  586                   259 
+
+-- table(sce$cell_subtype_fine) (NA-heavy passthrough, top 15) --
+
+  CD8.T.effector.memory   CD4.T.effector.memory CD4.T.naive.centr.mem.2 
+                  26276                   22678                   19644 
+        CD8.T.cytotoxic             CD4.T.reg.2     CD8.T.dysfunc.early 
+                  18476                   11688                    8279 
+        CD8.T.ISG.early             CD4.T.reg.1               CD4.T.ISG 
+                   7637                    6853                    5565 
+          CD4.T.reg.ISG      CD8.T.dysfunc.late   CD8.T.naive.centr.mem 
+                   3355                    2989                    2922 
+      CD8.T.dysfunc.ISG     CD4.T.dysfunc.early    CD4.T.dysfunc.late.1 
+                   2828                    2655                    2580 
+
+-- celltype x site --
+             
+              ascites omental  other
+  endothelial       4    6661  11356
+  fibroblast    12554   34735  99281
+  macrophage    16015   29922 120958
+  malignant     11094   48308 147861
+  Tcell         32143   39718  89617
+
+-- sort_parameters x site (CAVEAT 1 confound) --
+                      
+                       ascites omental  other
+  singlet, live, CD45-   23751   87761 250160
+  singlet, live, CD45+   48059   68121 202401
+  singlet, live, U           0    3462  16512
+
+-- patient x site --
+                 
+                  ascites omental other
+  SPECTRUM-OV-002       0    1872  2653
+  SPECTRUM-OV-003       0    3462 16512
+  SPECTRUM-OV-007    2059    6030 13892
+  SPECTRUM-OV-008       0    3829  9171
+  SPECTRUM-OV-009     339    8429 37570
+  SPECTRUM-OV-014    2427       0 19048
+  SPECTRUM-OV-022    3606       0 18388
+  SPECTRUM-OV-024    3393    3587  9426
+  SPECTRUM-OV-025       0    3560  6241
+  SPECTRUM-OV-026    6368       0 22706
+  SPECTRUM-OV-031       0       0  2922
+  SPECTRUM-OV-036       0    4509 12451
+  SPECTRUM-OV-037    2179    5329  8315
+  SPECTRUM-OV-041    4617    4932  6106
+  SPECTRUM-OV-042    3603    4487  9907
+  SPECTRUM-OV-045       0    2946 15055
+  SPECTRUM-OV-049       0    5451  5394
+  SPECTRUM-OV-050    2503    2595 10831
+  SPECTRUM-OV-051    1429    2167  6604
+  SPECTRUM-OV-052       0    6604  6488
+  SPECTRUM-OV-053       0    4741 16063
+  SPECTRUM-OV-054    1042    5110   684
+  SPECTRUM-OV-065    3765    3647 10623
+  SPECTRUM-OV-067       0     843  3592
+  SPECTRUM-OV-068     662    3495  4502
+  SPECTRUM-OV-070    1314    5680 14072
+  SPECTRUM-OV-071    4253       0 13605
+  SPECTRUM-OV-075    3021    5739 10658
+  SPECTRUM-OV-077    3167    2873 13857
+  SPECTRUM-OV-080    4685    1826  3458
+  SPECTRUM-OV-081      90    4485  6819
+  SPECTRUM-OV-082       0    5512 26470
+  SPECTRUM-OV-083    5018    8228  8590
+  SPECTRUM-OV-090       0    5960  5059
+  SPECTRUM-OV-105    2637    5622  9519
+  SPECTRUM-OV-107    2696    4372  7225
+  SPECTRUM-OV-110       0    5527 15612
+  SPECTRUM-OV-112    1948    3480  9058
+  SPECTRUM-OV-115       0    6317 16921
+  SPECTRUM-OV-116    4989    6098 10382
+  SPECTRUM-OV-118       0       0 22624
+
+patients total: 41 | with ascites: 25 | with omentum: 35 | PAIRED (both): 21 
+paired IDs: SPECTRUM-OV-007, SPECTRUM-OV-009, SPECTRUM-OV-024, SPECTRUM-OV-037, SPECTRUM-OV-041, SPECTRUM-OV-042, SPECTRUM-OV-050, SPECTRUM-OV-051, SPECTRUM-OV-054, SPECTRUM-OV-065, SPECTRUM-OV-068, SPECTRUM-OV-070, SPECTRUM-OV-075, SPECTRUM-OV-077, SPECTRUM-OV-080, SPECTRUM-OV-081, SPECTRUM-OV-083, SPECTRUM-OV-105, SPECTRUM-OV-107, SPECTRUM-OV-112, SPECTRUM-OV-116 
+
+-- gene/cell counts --
+genes after coordinate mapping: 21650 
+cells: 700227 
+rowData cols: gene_id, chr, start, stop, arm 
+any missing chr/start/stop/arm? FALSE 
+
+-- coordinate spot-check (re-verified on the SAVED object) --
+   gene expected   got   ok
+1  TP53    chr17 chr17 TRUE
+2 BRCA1    chr17 chr17 TRUE
+3   MYC     chr8  chr8 TRUE
+4 EPCAM     chr2  chr2 TRUE
+5 PTPRC     chr1  chr1 TRUE
+spot-check on saved object: PASSED 
+
+-- assay sanity --
+counts integer-valued: TRUE 
+cells with zero total counts: 0 
+logcounts range: 0.3128746 10.51706 
+any non-finite in logcounts (sampled): FALSE 
+
+done in 11.8 min

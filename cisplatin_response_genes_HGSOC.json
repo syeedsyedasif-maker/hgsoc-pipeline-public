@@ -1,0 +1,841 @@
+{
+  "meta": {
+    "title": "Cisplatin/platinum responder vs non-responder genes in HGSOC",
+    "response_definition": "platinum-sensitive vs platinum-resistant (platinum-free interval; relapse <6 months = resistant); NACT-CRS and in-vitro IC50 evidence flagged in evidence_types",
+    "direction_legend": {
+      "resistant_up": "higher expression/activity -> resistance/non-response",
+      "sensitive_up": "higher expression -> sensitivity/response",
+      "context_dependent": "direction flips with mutation vs expression vs reversion (see note)",
+      "prognostic_only": "survival-associated but NOT specific to platinum response"
+    },
+    "grade_legend": {
+      "A": "consistent HGSOC/EOC clinical + mechanistic support",
+      "B": "strong mechanistic (cell line/PDX/scRNA) + partial/inconsistent clinical",
+      "C": "emerging / limited / single-study / contested"
+    },
+    "caveat": "No molecular predictor of platinum resistance is clinically validated in HGSOC (ESMO-ESGO). Use as hypotheses / module-scoring inputs, not clinical stratifiers.",
+    "n_genes": 38
+  },
+  "genes": [
+    {
+      "gene": "BRCA1",
+      "aliases": [
+        "RNF53"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "HR / DNA repair",
+      "response_direction": "context_dependent",
+      "evidence_grade": "A",
+      "evidence_types": [
+        "clinical",
+        "mechanistic"
+      ],
+      "key_refs": [
+        "Norquist 2011 JCO",
+        "Weberpals/BRCA1-ERCC1 PMID 19035454",
+        "Sakai 2008 Nature"
+      ],
+      "note": "Loss-of-function mutation -> HRD -> platinum SENSITIVE. High expression or secondary reversion mutation -> RESISTANT. Do not place naively in a resistance-up module."
+    },
+    {
+      "gene": "BRCA2",
+      "aliases": [
+        "FANCD1"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "HR / DNA repair",
+      "response_direction": "context_dependent",
+      "evidence_grade": "A",
+      "evidence_types": [
+        "clinical",
+        "mechanistic"
+      ],
+      "key_refs": [
+        "Sakai 2008 Nature 451:1116",
+        "Norquist 2011 JCO"
+      ],
+      "note": "Same logic as BRCA1: germline/somatic LOF -> sensitive; secondary reversion restoring ORF -> acquired resistance."
+    },
+    {
+      "gene": "RAD51",
+      "aliases": [
+        "RAD51A",
+        "RECA"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "HR / DNA repair",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "functional",
+        "clinical"
+      ],
+      "key_refs": [
+        "RAD51/BRCA1 foci PDX PMC11234799"
+      ],
+      "note": "RAD51 nuclear foci = functional HR readout. LOW foci = HRD = SENSITIVE; retained/high foci = HR-proficient = RESISTANT. Functional assay, not simple mRNA level."
+    },
+    {
+      "gene": "SLFN11",
+      "aliases": [
+        "Schlafen11"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "replication stress / DDR",
+      "response_direction": "sensitive_up",
+      "evidence_grade": "A",
+      "evidence_types": [
+        "clinical",
+        "mechanistic",
+        "cell_line"
+      ],
+      "key_refs": [
+        "Akashi 2024 Mol Cancer Ther 10.1158/1535-7163.MCT-23-0257",
+        "Winkler 2021 JCI Insight PMID 34549724"
+      ],
+      "note": "Strongest single-gene SENSITIVITY predictor for DNA-damaging agents. HIGH SLFN11 -> better response/survival; loss -> resistant. BRCA-independent in HGSOC."
+    },
+    {
+      "gene": "ERCC1",
+      "aliases": [
+        "RAD10"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "nucleotide excision repair",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "clinical_conflicting",
+        "cell_line",
+        "PDX"
+      ],
+      "key_refs": [
+        "ERCC1/XPF PDX PMID 32847049",
+        "ERCC1 meta-analysis Wu 2020 APM"
+      ],
+      "note": "Most-studied NER biomarker; high ERCC1 -> resistant mechanistically. Clinical results CONFLICTING across cohorts/SNPs; failed to validate as standalone predictor in large studies."
+    },
+    {
+      "gene": "ERCC4",
+      "aliases": [
+        "XPF"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "nucleotide excision repair",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "cell_line",
+        "PDX"
+      ],
+      "key_refs": [
+        "ERCC1/XPF PDX PMID 32847049"
+      ],
+      "note": "Partners with ERCC1 as the structure-specific endonuclease cleaving Pt-DNA adducts. ERCC1/XPF complex (foci) may outperform mRNA."
+    },
+    {
+      "gene": "CCNE1",
+      "aliases": [
+        "Cyclin E1"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "cell cycle / primary resistance",
+      "response_direction": "resistant_up",
+      "evidence_grade": "A",
+      "evidence_types": [
+        "clinical",
+        "genomic",
+        "cell_line"
+      ],
+      "key_refs": [
+        "Etemadmoghadam 2010 PLoS ONE",
+        "TCGA/Bell 2011 Nature",
+        "Kim 2020 Nat Commun"
+      ],
+      "note": "Focal amplification in ~20% HGSOC; mutually exclusive with BRCA1/2 mutation -> HR-proficient primary resistance to platinum AND PARP inhibitors."
+    },
+    {
+      "gene": "MYC",
+      "aliases": [
+        "c-Myc"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "oncogene / metabolism",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "spatial",
+        "genomic"
+      ],
+      "key_refs": [
+        "Ju 2024 Biomark Res (recurrent OXPHOS+MYC)"
+      ],
+      "note": "Recurrent/platinum-surviving tumour regions upregulate MYC targets + oxidative phosphorylation (spatial)."
+    },
+    {
+      "gene": "RB1",
+      "aliases": [],
+      "compartment": "intrinsic",
+      "mechanism_class": "tumour suppressor loss",
+      "response_direction": "resistant_up",
+      "evidence_grade": "C",
+      "evidence_types": [
+        "genomic"
+      ],
+      "key_refs": [
+        "ERCC1 review (RB1/NF1/PTEN loss) ResearchGate 259631373"
+      ],
+      "note": "Inactivation reported among acquired-resistance genomic events; direction = loss associated with resistance."
+    },
+    {
+      "gene": "PTEN",
+      "aliases": [],
+      "compartment": "intrinsic",
+      "mechanism_class": "tumour suppressor loss / PI3K",
+      "response_direction": "resistant_up",
+      "evidence_grade": "C",
+      "evidence_types": [
+        "genomic"
+      ],
+      "key_refs": [
+        "ERCC1 review (RB1/NF1/PTEN loss) ResearchGate 259631373"
+      ],
+      "note": "Loss activates PI3K/AKT survival signalling; associated with acquired resistance. Loss = resistant."
+    },
+    {
+      "gene": "SLC31A1",
+      "aliases": [
+        "CTR1"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "drug influx (copper transporter)",
+      "response_direction": "sensitive_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "cell_line",
+        "clinical_SNP"
+      ],
+      "key_refs": [
+        "Holzer 2004; CTR1 A2780/A2780cis",
+        "Li 2017 CTR1 rs10981694 SNP"
+      ],
+      "note": "Main cisplatin INFLUX route. HIGH CTR1 -> more uptake -> SENSITIVE; downregulation -> resistant. Direction is opposite to efflux genes."
+    },
+    {
+      "gene": "ATP7B",
+      "aliases": [
+        "WND"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "drug efflux (copper ATPase)",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "clinical",
+        "cell_line"
+      ],
+      "key_refs": [
+        "Kalayda 2008 BMC Cancer 10.1186/1471-2407-8-175",
+        "ATP7A/B review 10.1016/j.phrs.2020.104987"
+      ],
+      "note": "Copper efflux ATPase that also effluxes/sequesters cisplatin. High ATP7B -> poorer platinum response."
+    },
+    {
+      "gene": "ATP7A",
+      "aliases": [
+        "MNK"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "drug efflux (copper ATPase)",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "clinical",
+        "cell_line"
+      ],
+      "key_refs": [
+        "Kalayda 2008 BMC Cancer 10.1186/1471-2407-8-175",
+        "ATP7A/B review 10.1016/j.phrs.2020.104987"
+      ],
+      "note": "As ATP7B; altered trans-Golgi/vesicular localisation in resistant A2780cis. High expression -> poor response."
+    },
+    {
+      "gene": "ABCB1",
+      "aliases": [
+        "MDR1",
+        "P-glycoprotein",
+        "PGP"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "ABC drug efflux pump",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "cell_line",
+        "clinical",
+        "mechanistic"
+      ],
+      "key_refs": [
+        "Lit review (TGF-beta -> ABCB1)",
+        "GST review medicina58111660"
+      ],
+      "note": "Classic multidrug efflux pump; stronger for taxane than platinum but co-upregulated in the resistant phenotype and TGF-beta driven in the niche."
+    },
+    {
+      "gene": "ABCA1",
+      "aliases": [],
+      "compartment": "intrinsic",
+      "mechanism_class": "ABC lipid/cholesterol transporter",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "clinical"
+      ],
+      "key_refs": [
+        "W. Wang 2021 Cancer Drug Resist 4:485"
+      ],
+      "note": "Reported as the DOMINANT efflux driver in clinically ACQUIRED carboplatin resistance (vs ABCB1); predicts poor outcome. Cholesterol transporter -> membrane lipid remodelling."
+    },
+    {
+      "gene": "GSTP1",
+      "aliases": [
+        "GST-pi"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "glutathione detox",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "cell_line",
+        "clinical_conflicting"
+      ],
+      "key_refs": [
+        "Sawers 2014 Br J Cancer 10.1038/bjc.2014.386",
+        "Tong et al. (higher in resistant, n=121)"
+      ],
+      "note": "Conjugates platinum to glutathione for detox; knockout re-sensitises A2780. Some cohorts show higher in resistant patients, but catalytic-vs-scaffold role debated."
+    },
+    {
+      "gene": "NFE2L2",
+      "aliases": [
+        "NRF2"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "oxidative-stress master TF",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "cell_line",
+        "mechanistic"
+      ],
+      "key_refs": [
+        "NRF2/ALDH stemness PMC6117306"
+      ],
+      "note": "Antioxidant response regulator; drives GSH synthesis, detox enzymes and ALDH-high stemness. High activity -> resistant."
+    },
+    {
+      "gene": "BCL2",
+      "aliases": [],
+      "compartment": "intrinsic",
+      "mechanism_class": "anti-apoptotic",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "cell_line",
+        "mechanistic"
+      ],
+      "key_refs": [
+        "Niche IL-6/STAT3 -> anti-apoptosis (lit review)",
+        "GST review (Bcl-2/survivin)"
+      ],
+      "note": "Anti-apoptotic; upregulated downstream of niche IL-6/STAT3 and in spheroids. Blocks Pt-induced apoptosis."
+    },
+    {
+      "gene": "BIRC5",
+      "aliases": [
+        "survivin"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "anti-apoptotic (IAP)",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "cell_line",
+        "mechanistic"
+      ],
+      "key_refs": [
+        "GST review (survivin) medicina58111660"
+      ],
+      "note": "Inhibitor of apoptosis; associated with platinum resistance and modulated with GSTP1/p53 axis."
+    },
+    {
+      "gene": "ALDH1A1",
+      "aliases": [
+        "ALDH1"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "cancer stem cell / detox",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "clinical",
+        "cell_line"
+      ],
+      "key_refs": [
+        "Landen; ALDH-high shorter PFS PLoS One 10.1371/journal.pone.0107142",
+        "ALDH1A1-NEK2 axis S2405844020322854"
+      ],
+      "note": "Ovarian CSC marker; ALDH-high enriched after platinum/taxane, correlates with SHORTER PFS. Drives drug efflux (ABCB1/ABCG2) via NEK2. Note: one hierarchy study reports ALDH-neg as resistant subset (contested)."
+    },
+    {
+      "gene": "FOS",
+      "aliases": [
+        "c-Fos",
+        "AP-1"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "immediate-early / stress state",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "scRNA",
+        "RNA-ISH_validated"
+      ],
+      "key_refs": [
+        "Zhang 2022 Sci Adv PMID 35196078 (GSE165897)"
+      ],
+      "note": "Core of the chemotherapy-enriched STRESS state in HGSOC; RNA-ISH validated (not a dissociation artefact). Directly from your GSE165897 dataset."
+    },
+    {
+      "gene": "JUN",
+      "aliases": [
+        "c-Jun",
+        "AP-1"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "immediate-early / stress state",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "scRNA",
+        "RNA-ISH_validated"
+      ],
+      "key_refs": [
+        "Zhang 2022 Sci Adv PMID 35196078 (GSE165897)"
+      ],
+      "note": "AP-1 immediate-early gene; RNA-ISH validated component of the post-NACT stress state."
+    },
+    {
+      "gene": "NR4A1",
+      "aliases": [
+        "Nur77"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "immediate-early / stress state",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "scRNA",
+        "RNA-ISH_validated"
+      ],
+      "key_refs": [
+        "Zhang 2022 Sci Adv PMID 35196078 (GSE165897)"
+      ],
+      "note": "Nuclear-receptor immediate-early gene; RNA-ISH validated stress-state marker in your dataset. Good positive control for a resistance module score."
+    },
+    {
+      "gene": "ZEB1",
+      "aliases": [],
+      "compartment": "intrinsic",
+      "mechanism_class": "EMT TF",
+      "response_direction": "prognostic_only",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "clinical",
+        "cell_line"
+      ],
+      "key_refs": [
+        "Sonego et al. PMC9374625"
+      ],
+      "note": "CAUTION: high ZEB1 = poor overall survival BUT NOT predictive of platinum/taxane response (knockdown reverses EMT without cisplatin re-sensitisation). Keep as prognostic covariate, not a resistance driver."
+    },
+    {
+      "gene": "SNAI2",
+      "aliases": [
+        "SLUG"
+      ],
+      "compartment": "intrinsic",
+      "mechanism_class": "partial-EMT program",
+      "response_direction": "resistant_up",
+      "evidence_grade": "C",
+      "evidence_types": [
+        "scRNA"
+      ],
+      "key_refs": [
+        "Xu 2022 Clin Cancer Res 28:3590"
+      ],
+      "note": "Member of the epithelial-intrinsic partial-EMT program (with NOTCH1/TGFBR1/WNT11); prognostic panel for treatment-resistant clones."
+    },
+    {
+      "gene": "NOTCH1",
+      "aliases": [],
+      "compartment": "intrinsic",
+      "mechanism_class": "partial-EMT program",
+      "response_direction": "resistant_up",
+      "evidence_grade": "C",
+      "evidence_types": [
+        "scRNA"
+      ],
+      "key_refs": [
+        "Xu 2022 Clin Cancer Res 28:3590"
+      ],
+      "note": "pEMT program driver; operates independently of CAF-derived mesenchymal signature."
+    },
+    {
+      "gene": "TGFBR1",
+      "aliases": [],
+      "compartment": "intrinsic",
+      "mechanism_class": "partial-EMT program / TGF-beta",
+      "response_direction": "resistant_up",
+      "evidence_grade": "C",
+      "evidence_types": [
+        "scRNA"
+      ],
+      "key_refs": [
+        "Xu 2022 Clin Cancer Res 28:3590"
+      ],
+      "note": "Links epithelial pEMT program to TGF-beta signalling; part of Xu 2022 resistance panel."
+    },
+    {
+      "gene": "WNT11",
+      "aliases": [],
+      "compartment": "intrinsic",
+      "mechanism_class": "partial-EMT program / WNT",
+      "response_direction": "resistant_up",
+      "evidence_grade": "C",
+      "evidence_types": [
+        "scRNA"
+      ],
+      "key_refs": [
+        "Xu 2022 Clin Cancer Res 28:3590"
+      ],
+      "note": "pEMT program member (Xu 2022)."
+    },
+    {
+      "gene": "COL11A1",
+      "aliases": [],
+      "compartment": "extrinsic",
+      "mechanism_class": "matrix-remodelling CAF",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "scRNA",
+        "clinical",
+        "mechanistic"
+      ],
+      "key_refs": [
+        "Zhang 2023 Front Pharmacol 14:1121586",
+        "Wu YH 2021 Oncogene 40:4503"
+      ],
+      "note": "High-confidence marker of pro-tumourigenic (cancer-specific) CAFs; desmoplasia physically restricts platinum diffusion and excludes T cells."
+    },
+    {
+      "gene": "LOX",
+      "aliases": [
+        "lysyl oxidase"
+      ],
+      "compartment": "extrinsic",
+      "mechanism_class": "matrix crosslinking CAF",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "mechanistic",
+        "preclinical"
+      ],
+      "key_refs": [
+        "Fu 2022 Drug Discov Today",
+        "Wu YH 2021 Oncogene"
+      ],
+      "note": "Crosslinks the COL11A1 matrix -> ECM stiffness -> chemo-privileged sanctuary. Druggable (LOX inhibitors)."
+    },
+    {
+      "gene": "FABP4",
+      "aliases": [],
+      "compartment": "extrinsic",
+      "mechanism_class": "adipocyte/endothelial lipid relay",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "mechanistic",
+        "scRNA"
+      ],
+      "key_refs": [
+        "Nieman 2011 Nat Med 17:1498",
+        "Mintz 2025 bioRxiv"
+      ],
+      "note": "Lipid chaperone fuelling beta-oxidation buffer against Pt mitochondrial stress. Mintz 2025 relocates FABP4 to omental endothelium rather than mature adipocytes. NOTE: adipocytes are lost in scRNA dissociation (reference blind spot)."
+    },
+    {
+      "gene": "IL6",
+      "aliases": [
+        "interleukin-6"
+      ],
+      "compartment": "extrinsic",
+      "mechanism_class": "macrophage inflammatory signalling",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "clinical",
+        "mechanistic"
+      ],
+      "key_refs": [
+        "X. Wu 2023 J Immunol Res 2023:6455704"
+      ],
+      "note": "TAM-secreted; activates STAT3 in tumour cells -> anti-apoptotic + NANOG stemness. Associated with platinum-resistant serous OC prognosis."
+    },
+    {
+      "gene": "STAT3",
+      "aliases": [],
+      "compartment": "extrinsic",
+      "mechanism_class": "inflammatory signalling node",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "mechanistic",
+        "clinical"
+      ],
+      "key_refs": [
+        "X. Wu 2023 J Immunol Res",
+        "Saini (STAT3 in ascites)"
+      ],
+      "note": "Downstream of IL-6; drives anti-apoptotic + stemness programs. Elevated STAT3 in ascites promotes invasion/metastasis."
+    },
+    {
+      "gene": "STAB1",
+      "aliases": [
+        "stabilin-1"
+      ],
+      "compartment": "extrinsic",
+      "mechanism_class": "immunosuppressive TAM (post-chemo)",
+      "response_direction": "resistant_up",
+      "evidence_grade": "B",
+      "evidence_types": [
+        "scRNA",
+        "mechanistic"
+      ],
+      "key_refs": [
+        "Elorbany 2024 Nat Commun 15:10144"
+      ],
+      "note": "Chemotherapy itself induces STAB1+ immunosuppressive macrophages -> protects surviving tumour cells. Repolarisation is a therapeutic angle."
+    },
+    {
+      "gene": "TMEM205",
+      "aliases": [],
+      "compartment": "intrinsic",
+      "mechanism_class": "candidate transporter / EV marker",
+      "response_direction": "resistant_up",
+      "evidence_grade": "C",
+      "evidence_types": [
+        "EV_proteomic",
+        "cell_line"
+      ],
+      "key_refs": [
+        "Dorayappan/EV study 2025 Oncogene 10.1038/s41388-025-03382-4"
+      ],
+      "note": "Differentially expressed EV protein in platinum-resistant vs sensitive HGSOC (AUC ~0.84). Single-group, needs independent validation."
+    },
+    {
+      "gene": "CFH",
+      "aliases": [
+        "complement factor H"
+      ],
+      "compartment": "extrinsic",
+      "mechanism_class": "candidate EV / complement",
+      "response_direction": "resistant_up",
+      "evidence_grade": "C",
+      "evidence_types": [
+        "EV_proteomic"
+      ],
+      "key_refs": [
+        "Dorayappan/EV study 2025 Oncogene 10.1038/s41388-025-03382-4"
+      ],
+      "note": "EV biomarker of platinum resistance (AUC ~0.95 in that study). Candidate, single-cohort."
+    },
+    {
+      "gene": "HSD11B1",
+      "aliases": [],
+      "compartment": "intrinsic",
+      "mechanism_class": "immune/metabolic (candidate)",
+      "response_direction": "sensitive_up",
+      "evidence_grade": "C",
+      "evidence_types": [
+        "clinical_expression",
+        "TCGA_validated"
+      ],
+      "key_refs": [
+        "Immune 770-gene NanoString HGSOC CMAR S219872"
+      ],
+      "note": "Higher expression associated with LOWER recurrence risk in an immune-panel HGSOC model validated on TCGA. Candidate sensitivity-associated gene."
+    },
+    {
+      "gene": "FBXO2",
+      "aliases": [],
+      "compartment": "intrinsic",
+      "mechanism_class": "candidate (SCF E3 ligase)",
+      "response_direction": "resistant_up",
+      "evidence_grade": "C",
+      "evidence_types": [
+        "scRNA",
+        "bulk_integration"
+      ],
+      "key_refs": [
+        "Heliyon 2024 10.1016/j.heliyon.2024.e28490"
+      ],
+      "note": "Identified by integrated scRNA+bulk as chemoresistance-associated candidate biomarker in HGSOC. Emerging."
+    }
+  ],
+  "genesets": {
+    "resistance_up_core": [
+      "RAD51",
+      "ERCC1",
+      "ERCC4",
+      "CCNE1",
+      "MYC",
+      "ATP7B",
+      "ATP7A",
+      "ABCB1",
+      "ABCA1",
+      "GSTP1",
+      "NFE2L2",
+      "BCL2",
+      "BIRC5",
+      "ALDH1A1",
+      "FOS",
+      "JUN",
+      "NR4A1",
+      "COL11A1",
+      "LOX",
+      "FABP4",
+      "IL6",
+      "STAT3",
+      "STAB1"
+    ],
+    "resistance_up_all": [
+      "RAD51",
+      "ERCC1",
+      "ERCC4",
+      "CCNE1",
+      "MYC",
+      "RB1",
+      "PTEN",
+      "ATP7B",
+      "ATP7A",
+      "ABCB1",
+      "ABCA1",
+      "GSTP1",
+      "NFE2L2",
+      "BCL2",
+      "BIRC5",
+      "ALDH1A1",
+      "FOS",
+      "JUN",
+      "NR4A1",
+      "SNAI2",
+      "NOTCH1",
+      "TGFBR1",
+      "WNT11",
+      "COL11A1",
+      "LOX",
+      "FABP4",
+      "IL6",
+      "STAT3",
+      "STAB1",
+      "TMEM205",
+      "CFH",
+      "FBXO2"
+    ],
+    "sensitivity_up": [
+      "SLFN11",
+      "SLC31A1",
+      "HSD11B1"
+    ],
+    "context_dependent_DDR": [
+      "BRCA1",
+      "BRCA2"
+    ],
+    "prognostic_only": [
+      "ZEB1"
+    ],
+    "intrinsic": [
+      "BRCA1",
+      "BRCA2",
+      "RAD51",
+      "SLFN11",
+      "ERCC1",
+      "ERCC4",
+      "CCNE1",
+      "MYC",
+      "RB1",
+      "PTEN",
+      "SLC31A1",
+      "ATP7B",
+      "ATP7A",
+      "ABCB1",
+      "ABCA1",
+      "GSTP1",
+      "NFE2L2",
+      "BCL2",
+      "BIRC5",
+      "ALDH1A1",
+      "FOS",
+      "JUN",
+      "NR4A1",
+      "ZEB1",
+      "SNAI2",
+      "NOTCH1",
+      "TGFBR1",
+      "WNT11",
+      "TMEM205",
+      "HSD11B1",
+      "FBXO2"
+    ],
+    "extrinsic_TME": [
+      "COL11A1",
+      "LOX",
+      "FABP4",
+      "IL6",
+      "STAT3",
+      "STAB1",
+      "CFH"
+    ],
+    "stress_IEG_state_GSE165897": [
+      "FOS",
+      "JUN",
+      "NR4A1"
+    ],
+    "partial_EMT_Xu2022": [
+      "SNAI2",
+      "NOTCH1",
+      "TGFBR1",
+      "WNT11"
+    ],
+    "matrix_CAF": [
+      "COL11A1",
+      "LOX",
+      "FAP"
+    ],
+    "drug_efflux": [
+      "ATP7A",
+      "ATP7B",
+      "ABCB1",
+      "ABCA1",
+      "ABCC1"
+    ],
+    "grade_A": [
+      "BRCA1",
+      "BRCA2",
+      "SLFN11",
+      "CCNE1"
+    ]
+  }
+}

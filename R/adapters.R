@@ -89,3 +89,29 @@ as_spatialrna <- function(coords, spot_counts, sce_ref, type_col = "celltype") {
        ref_counts = ref_counts,
        ref_types = ref_types)
 }
+
+# Real-bulk gene-ID harmonization: TCGA's gene_count_matrix.tsv rownames are
+# versioned Ensembl IDs (ENSG...\.N); the GSE165897-derived sc reference is in
+# HGNC symbol space (see 00_load_real_data.R). Map bulk -> symbol (not the
+# reverse) since the reference is consumed by every script (gene coordinates,
+# signatures, DE gene names) while the bulk matrix has exactly one load site
+# (03_deconvolution.R). Offline via org.Hs.eg.db (already pinned in
+# renv.lock) rather than biomaRt, so a routine deconvolution run doesn't pick
+# up a live-Ensembl dependency.
+harmonize_bulk_to_symbols <- function(bulk_mat) {
+  if (!requireNamespace("org.Hs.eg.db", quietly = TRUE) ||
+      !requireNamespace("AnnotationDbi", quietly = TRUE))
+    stop("harmonize_bulk_to_symbols() needs org.Hs.eg.db + AnnotationDbi installed.")
+  ensg <- sub("\\.[0-9]+$", "", rownames(bulk_mat))       # strip version suffix
+  sym <- suppressMessages(AnnotationDbi::mapIds(
+    org.Hs.eg.db::org.Hs.eg.db, keys = ensg, keytype = "ENSEMBL",
+    column = "SYMBOL", multiVals = "first"))
+  keep <- !is.na(sym)
+  message(sprintf("  harmonize_bulk_to_symbols: %d of %d TCGA genes dropped (no ENSEMBL->SYMBOL mapping)",
+                  sum(!keep), length(sym)))
+  bulk_mat <- bulk_mat[keep, , drop = FALSE]
+  sym <- sym[keep]
+  # Collapse duplicate symbols (multiple Ensembl IDs -> one symbol) by SUMMING
+  # counts, not dropping -- preserves total signal instead of arbitrary discard.
+  rowsum(bulk_mat, group = sym)
+}

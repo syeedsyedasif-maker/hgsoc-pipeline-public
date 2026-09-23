@@ -162,3 +162,28 @@ medium:
     n_patients: 80
     cells_per_patient: 400
     cells_per_spot: 5
+
+# ---- real profile: GSE165897 scRNA reference + TCGA-OV bulk (run_all.R real) -
+# 00_load_real_data.R replaces 00_simulate.R for this profile (see run_all.R);
+# 01-04 are the same scripts, reading whichever data/sce.rds got produced.
+# sizes/group_prob/splatter/cnv/truth keys below are inherited from `default`
+# but are UNUSED on this path (00_load_real_data.R ignores them entirely) --
+# left in place only because they're still load-bearing for the synthetic
+# profiles above and for 03b_deconv_benchmark.R.
+real:
+  confounds:
+    # GSE165897 (scRNA) vs TCGA-OV (bulk) is already a genuine, uncontrolled
+    # reference<->bulk platform gap. These confounds were built to SIMULATE
+    # exactly that gap (Hippen 2023); stacking an uncalibrated synthetic
+    # multiplier on top of a real one adds noise, not realism, and makes a
+    # poor deconvolution result impossible to attribute to either cause.
+    batch_shift:       { enabled: false }
+    mrna_enrichment:   { enabled: false }
+    # adipocyte_blindspot's toggle is vacuous on this path regardless of
+    # value: GSE165897 has zero adipocyte cells, so the reference can never
+    # include them whether or not this is "enabled".
+  # ari_min is intentionally NOT overridden here: run 01_qc_cluster.R on real
+  # data first, look at the actual ARI (real scRNA clustering/CNV-calling
+  # will not necessarily hit the splatter-tuned 0.70 bar), and only then
+  # decide -- with a one-line justification tied to the observed number --
+  # whether this profile's threshold should differ from `default`'s.

@@ -1,0 +1,658 @@
+Warning: dependency ‘Matrix’ is not available
+trying URL 'https://cloud.r-project.org/src/contrib/survival_3.8-9.tar.gz'
+Content type 'application/x-gzip' length 8821382 bytes (8.4 MB)
+==================================================
+downloaded 8.4 MB
+
+ERROR: dependency ‘Matrix’ is not available for package ‘survival’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/survival’
+
+The downloaded source packages are in
+	‘/tmp/RtmpVRcRDp/downloaded_packages’
+Updating HTML index of packages in '.Library'
+Making 'packages.html' ... done
+Warning messages:
+1: package ‘Matrix’ is not available for this version of R
+‘Matrix’ version 1.7-5 is in the repositories but depends on R (>= 4.4)
+‘Matrix’ version 1.7-5 is in the repositories but depends on R (>= 4.7)
+
+A version of this package for your version of R might be available elsewhere,
+see the ideas at
+https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages 
+2: In install.packages(p) :
+  installation of package ‘survival’ had non-zero exit status
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.27), R 4.3.1 (2023-06-16)
+Installing package(s) 'splatter'
+Warning: dependencies ‘MASS’, ‘Matrix’ are not available
+also installing the dependencies ‘SparseArray’, ‘sparseMatrixStats’, ‘DelayedArray’, ‘survival’, ‘DelayedMatrixStats’, ‘beachmat’, ‘S4Arrays’, ‘SingleCellExperiment’, ‘fitdistrplus’, ‘scuttle’, ‘SummarizedExperiment’
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/SparseArray_1.2.4.tar.gz'
+Content type 'application/gzip' length 367778 bytes (359 KB)
+==================================================
+downloaded 359 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/sparseMatrixStats_1.14.0.tar.gz'
+Content type 'application/gzip' length 703089 bytes (686 KB)
+==================================================
+downloaded 686 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/DelayedArray_0.28.0.tar.gz'
+Content type 'application/gzip' length 624166 bytes (609 KB)
+==================================================
+downloaded 609 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/survival_3.8-9.tar.gz'
+Content type 'application/x-gzip' length 8821382 bytes (8.4 MB)
+==================================================
+downloaded 8.4 MB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/DelayedMatrixStats_1.24.0.tar.gz'
+Content type 'application/gzip' length 271120 bytes (264 KB)
+==================================================
+downloaded 264 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/beachmat_2.18.1.tar.gz'
+Content type 'application/gzip' length 512143 bytes (500 KB)
+==================================================
+downloaded 500 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/S4Arrays_1.2.1.tar.gz'
+Content type 'application/gzip' length 282089 bytes (275 KB)
+==================================================
+downloaded 275 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/SingleCellExperiment_1.24.0.tar.gz'
+Content type 'application/gzip' length 985002 bytes (961 KB)
+==================================================
+downloaded 961 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/fitdistrplus_1.2-6.tar.gz'
+Content type 'application/x-gzip' length 2474546 bytes (2.4 MB)
+==================================================
+downloaded 2.4 MB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/scuttle_1.12.0.tar.gz'
+Content type 'application/gzip' length 1029515 bytes (1005 KB)
+==================================================
+downloaded 1005 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/SummarizedExperiment_1.32.0.tar.gz'
+Content type 'application/gzip' length 686052 bytes (669 KB)
+==================================================
+downloaded 669 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/splatter_1.26.0.tar.gz'
+Content type 'application/gzip' length 6797246 bytes (6.5 MB)
+==================================================
+downloaded 6.5 MB
+
+ERROR: dependency ‘Matrix’ is not available for package ‘sparseMatrixStats’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/sparseMatrixStats’
+ERROR: dependency ‘Matrix’ is not available for package ‘survival’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/survival’
+ERROR: dependency ‘Matrix’ is not available for package ‘S4Arrays’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/S4Arrays’
+ERROR: dependencies ‘Matrix’, ‘S4Arrays’ are not available for package ‘SparseArray’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/SparseArray’
+ERROR: dependencies ‘MASS’, ‘survival’ are not available for package ‘fitdistrplus’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/fitdistrplus’
+ERROR: dependencies ‘Matrix’, ‘S4Arrays’, ‘SparseArray’ are not available for package ‘DelayedArray’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/DelayedArray’
+ERROR: dependencies ‘DelayedArray’, ‘sparseMatrixStats’, ‘Matrix’ are not available for package ‘DelayedMatrixStats’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/DelayedMatrixStats’
+ERROR: dependencies ‘DelayedArray’, ‘SparseArray’, ‘Matrix’ are not available for package ‘beachmat’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/beachmat’
+ERROR: dependencies ‘Matrix’, ‘S4Arrays’, ‘DelayedArray’ are not available for package ‘SummarizedExperiment’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/SummarizedExperiment’
+ERROR: dependencies ‘SummarizedExperiment’, ‘DelayedArray’ are not available for package ‘SingleCellExperiment’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/SingleCellExperiment’
+ERROR: dependencies ‘SingleCellExperiment’, ‘Matrix’, ‘SummarizedExperiment’, ‘DelayedArray’, ‘DelayedMatrixStats’, ‘beachmat’ are not available for package ‘scuttle’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/scuttle’
+ERROR: dependencies ‘SingleCellExperiment’, ‘fitdistrplus’, ‘scuttle’, ‘SummarizedExperiment’ are not available for package ‘splatter’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/splatter’
+
+The downloaded source packages are in
+	‘/tmp/RtmpVRcRDp/downloaded_packages’
+Updating HTML index of packages in '.Library'
+Making 'packages.html' ... done
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.27), R 4.3.1 (2023-06-16)
+Installing package(s) 'SingleCellExperiment'
+Warning: dependency ‘Matrix’ is not available
+also installing the dependencies ‘S4Arrays’, ‘SparseArray’, ‘SummarizedExperiment’, ‘DelayedArray’
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/S4Arrays_1.2.1.tar.gz'
+Content type 'application/gzip' length 282089 bytes (275 KB)
+==================================================
+downloaded 275 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/SparseArray_1.2.4.tar.gz'
+Content type 'application/gzip' length 367778 bytes (359 KB)
+==================================================
+downloaded 359 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/SummarizedExperiment_1.32.0.tar.gz'
+Content type 'application/gzip' length 686052 bytes (669 KB)
+==================================================
+downloaded 669 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/DelayedArray_0.28.0.tar.gz'
+Content type 'application/gzip' length 624166 bytes (609 KB)
+==================================================
+downloaded 609 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/SingleCellExperiment_1.24.0.tar.gz'
+Content type 'application/gzip' length 985002 bytes (961 KB)
+==================================================
+downloaded 961 KB
+
+ERROR: dependency ‘Matrix’ is not available for package ‘S4Arrays’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/S4Arrays’
+ERROR: dependencies ‘Matrix’, ‘S4Arrays’ are not available for package ‘SparseArray’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/SparseArray’
+ERROR: dependencies ‘Matrix’, ‘S4Arrays’, ‘SparseArray’ are not available for package ‘DelayedArray’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/DelayedArray’
+ERROR: dependencies ‘Matrix’, ‘S4Arrays’, ‘DelayedArray’ are not available for package ‘SummarizedExperiment’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/SummarizedExperiment’
+ERROR: dependencies ‘SummarizedExperiment’, ‘DelayedArray’ are not available for package ‘SingleCellExperiment’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/SingleCellExperiment’
+
+The downloaded source packages are in
+	‘/tmp/RtmpVRcRDp/downloaded_packages’
+Updating HTML index of packages in '.Library'
+Making 'packages.html' ... done
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.27), R 4.3.1 (2023-06-16)
+Installing package(s) 'SummarizedExperiment'
+Warning: dependency ‘Matrix’ is not available
+also installing the dependencies ‘SparseArray’, ‘S4Arrays’, ‘DelayedArray’
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/SparseArray_1.2.4.tar.gz'
+Content type 'application/gzip' length 367778 bytes (359 KB)
+==================================================
+downloaded 359 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/S4Arrays_1.2.1.tar.gz'
+Content type 'application/gzip' length 282089 bytes (275 KB)
+==================================================
+downloaded 275 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/DelayedArray_0.28.0.tar.gz'
+Content type 'application/gzip' length 624166 bytes (609 KB)
+==================================================
+downloaded 609 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/SummarizedExperiment_1.32.0.tar.gz'
+Content type 'application/gzip' length 686052 bytes (669 KB)
+==================================================
+downloaded 669 KB
+
+ERROR: dependency ‘Matrix’ is not available for package ‘S4Arrays’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/S4Arrays’
+ERROR: dependencies ‘Matrix’, ‘S4Arrays’ are not available for package ‘SparseArray’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/SparseArray’
+ERROR: dependencies ‘Matrix’, ‘S4Arrays’, ‘SparseArray’ are not available for package ‘DelayedArray’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/DelayedArray’
+ERROR: dependencies ‘Matrix’, ‘S4Arrays’, ‘DelayedArray’ are not available for package ‘SummarizedExperiment’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/SummarizedExperiment’
+
+The downloaded source packages are in
+	‘/tmp/RtmpVRcRDp/downloaded_packages’
+Updating HTML index of packages in '.Library'
+Making 'packages.html' ... done
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.27), R 4.3.1 (2023-06-16)
+Installing package(s) 'scater'
+Warning: dependency ‘Matrix’ is not available
+also installing the dependencies ‘sparseMatrixStats’, ‘DelayedMatrixStats’, ‘S4Arrays’, ‘SparseArray’, ‘ScaledMatrix’, ‘irlba’, ‘rsvd’, ‘RSpectra’, ‘ragg’, ‘SingleCellExperiment’, ‘scuttle’, ‘SummarizedExperiment’, ‘DelayedArray’, ‘beachmat’, ‘BiocNeighbors’, ‘BiocSingular’, ‘RcppML’, ‘uwot’, ‘ggrastr’
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/sparseMatrixStats_1.14.0.tar.gz'
+Content type 'application/gzip' length 703089 bytes (686 KB)
+==================================================
+downloaded 686 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/DelayedMatrixStats_1.24.0.tar.gz'
+Content type 'application/gzip' length 271120 bytes (264 KB)
+==================================================
+downloaded 264 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/S4Arrays_1.2.1.tar.gz'
+Content type 'application/gzip' length 282089 bytes (275 KB)
+==================================================
+downloaded 275 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/SparseArray_1.2.4.tar.gz'
+Content type 'application/gzip' length 367778 bytes (359 KB)
+==================================================
+downloaded 359 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/ScaledMatrix_1.10.0.tar.gz'
+Content type 'application/gzip' length 313034 bytes (305 KB)
+==================================================
+downloaded 305 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/irlba_2.3.7.tar.gz'
+Content type 'application/x-gzip' length 391622 bytes (382 KB)
+==================================================
+downloaded 382 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/rsvd_1.0.5.tar.gz'
+Content type 'application/x-gzip' length 3458090 bytes (3.3 MB)
+==================================================
+downloaded 3.3 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/RSpectra_0.16-2.tar.gz'
+Content type 'application/x-gzip' length 128030 bytes (125 KB)
+==================================================
+downloaded 125 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/ragg_1.5.2.tar.gz'
+Content type 'application/x-gzip' length 438353 bytes (428 KB)
+==================================================
+downloaded 428 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/SingleCellExperiment_1.24.0.tar.gz'
+Content type 'application/gzip' length 985002 bytes (961 KB)
+==================================================
+downloaded 961 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/scuttle_1.12.0.tar.gz'
+Content type 'application/gzip' length 1029515 bytes (1005 KB)
+==================================================
+downloaded 1005 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/SummarizedExperiment_1.32.0.tar.gz'
+Content type 'application/gzip' length 686052 bytes (669 KB)
+==================================================
+downloaded 669 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/DelayedArray_0.28.0.tar.gz'
+Content type 'application/gzip' length 624166 bytes (609 KB)
+==================================================
+downloaded 609 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/beachmat_2.18.1.tar.gz'
+Content type 'application/gzip' length 512143 bytes (500 KB)
+==================================================
+downloaded 500 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/BiocNeighbors_1.20.2.tar.gz'
+Content type 'application/gzip' length 1039738 bytes (1015 KB)
+==================================================
+downloaded 1015 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/BiocSingular_1.18.0.tar.gz'
+Content type 'application/gzip' length 616448 bytes (602 KB)
+==================================================
+downloaded 602 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/RcppML_0.3.7.1.tar.gz'
+Content type 'application/x-gzip' length 45810 bytes (44 KB)
+==================================================
+downloaded 44 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/uwot_0.2.4.tar.gz'
+Content type 'application/x-gzip' length 614670 bytes (600 KB)
+==================================================
+downloaded 600 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/ggrastr_1.0.2.tar.gz'
+Content type 'application/x-gzip' length 2592994 bytes (2.5 MB)
+==================================================
+downloaded 2.5 MB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/scater_1.30.1.tar.gz'
+Content type 'application/gzip' length 4123647 bytes (3.9 MB)
+==================================================
+downloaded 3.9 MB
+
+ERROR: dependency ‘Matrix’ is not available for package ‘sparseMatrixStats’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/sparseMatrixStats’
+ERROR: dependency ‘Matrix’ is not available for package ‘S4Arrays’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/S4Arrays’
+ERROR: dependency ‘Matrix’ is not available for package ‘irlba’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/irlba’
+ERROR: dependency ‘Matrix’ is not available for package ‘rsvd’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/rsvd’
+ERROR: dependency ‘Matrix’ is not available for package ‘RSpectra’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/RSpectra’
+* installing *source* package ‘ragg’ ...
+** package ‘ragg’ successfully unpacked and MD5 sums checked
+** using staged installation
+Found pkg-config cflags and libs!
+Using PKG_CFLAGS=-I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp 
+Using PKG_LIBS=-lfreetype -lpng16 -ltiff -ljpeg -lwebp -lwebpmux 
+** libs
+using C++ compiler: ‘x86_64-conda-linux-gnu-c++ (conda-forge gcc 15.2.0-19) 15.2.0’
+x86_64-conda-linux-gnu-c++ -std=gnu++17 -I"/userhome/conda/envs/hgsoc_pipeline/lib/R/include" -DNDEBUG -I./agg/include -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp  -I'/userhome/conda/envs/hgsoc_pipeline/lib/R/library/systemfonts/include' -I'/userhome/conda/envs/hgsoc_pipeline/lib/R/library/textshaping/include' -DNDEBUG -D_FORTIFY_SOURCE=2 -O2 -isystem /userhome/conda/envs/hgsoc_pipeline/include -I/userhome/conda/envs/hgsoc_pipeline/include -Wl,-rpath-link,/userhome/conda/envs/hgsoc_pipeline/lib    -fpic  -fvisibility-inlines-hidden  -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /userhome/conda/envs/hgsoc_pipeline/include -fdebug-prefix-map=/home/conda/feedstock_root/build_artifacts/r-base-split_1695968301569/work=/usr/local/src/conda/r-base-4.3.1 -fdebug-prefix-map=/userhome/conda/envs/hgsoc_pipeline=/usr/local/src/conda-prefix  -c capture_dev.cpp -o capture_dev.o
+In file included from /usr/include/x86_64-linux-gnu/sys/types.h:129,
+                 from /userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/stdlib.h:514,
+                 from /userhome/conda/envs/hgsoc_pipeline/lib/gcc/x86_64-conda-linux-gnu/15.2.0/include/c++/cstdlib:83,
+                 from /userhome/conda/envs/hgsoc_pipeline/lib/gcc/x86_64-conda-linux-gnu/15.2.0/include/c++/ext/string_conversions.h:45,
+                 from /userhome/conda/envs/hgsoc_pipeline/lib/gcc/x86_64-conda-linux-gnu/15.2.0/include/c++/bits/basic_string.h:4444,
+                 from /userhome/conda/envs/hgsoc_pipeline/lib/gcc/x86_64-conda-linux-gnu/15.2.0/include/c++/string:56,
+                 from ragg.h:3,
+                 from capture_dev.cpp:1:
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:8:9: error: '__time64_t' does not name a type; did you mean '__timer_t'?
+    8 | typedef __time64_t time_t;
+      |         ^~~~~~~~~~
+      |         __timer_t
+In file included from /usr/include/x86_64-linux-gnu/sys/select.h:37,
+                 from /usr/include/x86_64-linux-gnu/sys/types.h:179:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:11:3: error: '__time64_t' does not name a type; did you mean '__timer_t'?
+   11 |   __time64_t tv_sec;            /* Seconds.  */
+      |   ^~~~~~~~~~
+      |   __timer_t
+In file included from /usr/include/x86_64-linux-gnu/sys/select.h:39:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:14:3: error: '__time64_t' does not name a type; did you mean '__timer_t'?
+   14 |   __time64_t tv_sec;            /* Seconds.  */
+      |   ^~~~~~~~~~
+      |   __timer_t
+In file included from /userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/pthread.h:23,
+                 from /userhome/conda/envs/hgsoc_pipeline/lib/gcc/x86_64-conda-linux-gnu/15.2.0/include/c++/x86_64-conda-linux-gnu/bits/gthr-default.h:35,
+                 from /userhome/conda/envs/hgsoc_pipeline/lib/gcc/x86_64-conda-linux-gnu/15.2.0/include/c++/x86_64-conda-linux-gnu/bits/gthr.h:157,
+                 from /userhome/conda/envs/hgsoc_pipeline/lib/gcc/x86_64-conda-linux-gnu/15.2.0/include/c++/ext/atomicity.h:37,
+                 from /userhome/conda/envs/hgsoc_pipeline/lib/gcc/x86_64-conda-linux-gnu/15.2.0/include/c++/bits/shared_ptr_base.h:61,
+                 from /userhome/conda/envs/hgsoc_pipeline/lib/gcc/x86_64-conda-linux-gnu/15.2.0/include/c++/bits/shared_ptr.h:53,
+                 from /userhome/conda/envs/hgsoc_pipeline/lib/gcc/x86_64-conda-linux-gnu/15.2.0/include/c++/memory:82,
+                 from init_device.h:5,
+                 from capture_dev.cpp:2:
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:76:8: error: 'time_t' does not name a type
+   76 | extern time_t time (time_t *__timer) __THROW;
+      |        ^~~~~~
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:49:1: note: 'time_t' is defined in header '<ctime>'; this is probably fixable by adding '#include <ctime>'
+   48 | # include <bits/types/struct_itimerspec.h>
+  +++ |+#include <ctime>
+   49 | struct sigevent;
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:79:25: error: 'time_t' was not declared in this scope
+   79 | extern double difftime (time_t __time1, time_t __time0)
+      |                         ^~~~~~
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:79:25: note: 'time_t' is defined in header '<ctime>'; this is probably fixable by adding '#include <ctime>'
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:79:41: error: 'time_t' was not declared in this scope
+   79 | extern double difftime (time_t __time1, time_t __time0)
+      |                                         ^~~~~~
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:79:41: note: 'time_t' is defined in header '<ctime>'; this is probably fixable by adding '#include <ctime>'
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:79:55: error: expression list treated as compound expression in initializer [-fpermissive]
+   79 | extern double difftime (time_t __time1, time_t __time0)
+      |                                                       ^
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:83:8: error: 'time_t' does not name a type
+   83 | extern time_t mktime (struct tm *__tp) __THROW;
+      |        ^~~~~~
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:83:8: note: 'time_t' is defined in header '<ctime>'; this is probably fixable by adding '#include <ctime>'
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:133:33: error: 'time_t' does not name a type
+  133 | extern struct tm *gmtime (const time_t *__timer) __THROW;
+      |                                 ^~~~~~
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:133:33: note: 'time_t' is defined in header '<ctime>'; this is probably fixable by adding '#include <ctime>'
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:137:36: error: 'time_t' does not name a type
+  137 | extern struct tm *localtime (const time_t *__timer) __THROW;
+      |                                    ^~~~~~
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:137:36: note: 'time_t' is defined in header '<ctime>'; this is probably fixable by adding '#include <ctime>'
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:155:35: error: 'time_t' does not name a type
+  155 | extern struct tm *gmtime_r (const time_t *__restrict __timer,
+      |                                   ^~~~~~
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:155:35: note: 'time_t' is defined in header '<ctime>'; this is probably fixable by adding '#include <ctime>'
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:160:38: error: 'time_t' does not name a type
+  160 | extern struct tm *localtime_r (const time_t *__restrict __timer,
+      |                                      ^~~~~~
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:160:38: note: 'time_t' is defined in header '<ctime>'; this is probably fixable by adding '#include <ctime>'
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:184:27: error: 'time_t' does not name a type
+  184 | extern char *ctime (const time_t *__timer) __THROW;
+      |                           ^~~~~~
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:184:27: note: 'time_t' is defined in header '<ctime>'; this is probably fixable by adding '#include <ctime>'
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:203:29: error: 'time_t' does not name a type
+  203 | extern char *ctime_r (const time_t *__restrict __timer,
+      |                             ^~~~~~
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:203:29: note: 'time_t' is defined in header '<ctime>'; this is probably fixable by adding '#include <ctime>'
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:247:8: error: 'time_t' does not name a type
+  247 | extern time_t timegm (struct tm *__tp) __THROW;
+      |        ^~~~~~
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:247:8: note: 'time_t' is defined in header '<ctime>'; this is probably fixable by adding '#include <ctime>'
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:264:8: error: 'time_t' does not name a type
+  264 | extern time_t timelocal (struct tm *__tp) __THROW;
+      |        ^~~~~~
+/userhome/conda/envs/hgsoc_pipeline/x86_64-conda-linux-gnu/sysroot/usr/include/time.h:264:8: note: 'time_t' is defined in header '<ctime>'; this is probably fixable by adding '#include <ctime>'
+make: *** [/userhome/conda/envs/hgsoc_pipeline/lib/R/etc/Makeconf:200: capture_dev.o] Error 1
+ERROR: compilation failed for package ‘ragg’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/ragg’
+ERROR: dependency ‘Matrix’ is not available for package ‘BiocNeighbors’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/BiocNeighbors’
+ERROR: dependency ‘Matrix’ is not available for package ‘RcppML’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/RcppML’
+ERROR: dependencies ‘Matrix’, ‘S4Arrays’ are not available for package ‘SparseArray’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/SparseArray’
+ERROR: dependencies ‘Matrix’, ‘irlba’, ‘RSpectra’ are not available for package ‘uwot’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/uwot’
+ERROR: dependency ‘ragg’ is not available for package ‘ggrastr’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/ggrastr’
+ERROR: dependencies ‘Matrix’, ‘S4Arrays’, ‘SparseArray’ are not available for package ‘DelayedArray’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/DelayedArray’
+ERROR: dependencies ‘DelayedArray’, ‘sparseMatrixStats’, ‘Matrix’ are not available for package ‘DelayedMatrixStats’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/DelayedMatrixStats’
+ERROR: dependencies ‘Matrix’, ‘DelayedArray’ are not available for package ‘ScaledMatrix’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/ScaledMatrix’
+ERROR: dependencies ‘Matrix’, ‘S4Arrays’, ‘DelayedArray’ are not available for package ‘SummarizedExperiment’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/SummarizedExperiment’
+ERROR: dependencies ‘DelayedArray’, ‘SparseArray’, ‘Matrix’ are not available for package ‘beachmat’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/beachmat’
+ERROR: dependencies ‘SummarizedExperiment’, ‘DelayedArray’ are not available for package ‘SingleCellExperiment’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/SingleCellExperiment’
+ERROR: dependencies ‘Matrix’, ‘DelayedArray’, ‘ScaledMatrix’, ‘irlba’, ‘rsvd’, ‘beachmat’ are not available for package ‘BiocSingular’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/BiocSingular’
+ERROR: dependencies ‘SingleCellExperiment’, ‘Matrix’, ‘SummarizedExperiment’, ‘DelayedArray’, ‘DelayedMatrixStats’, ‘beachmat’ are not available for package ‘scuttle’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/scuttle’
+ERROR: dependencies ‘SingleCellExperiment’, ‘scuttle’, ‘Matrix’, ‘SummarizedExperiment’, ‘DelayedArray’, ‘beachmat’, ‘BiocNeighbors’, ‘BiocSingular’, ‘RcppML’, ‘uwot’, ‘ggrastr’ are not available for package ‘scater’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/scater’
+
+The downloaded source packages are in
+	‘/tmp/RtmpVRcRDp/downloaded_packages’
+Updating HTML index of packages in '.Library'
+Making 'packages.html' ... done
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.27), R 4.3.1 (2023-06-16)
+Installing package(s) 'scran'
+Warning: dependency ‘Matrix’ is not available
+also installing the dependencies ‘S4Arrays’, ‘SparseArray’, ‘sparseMatrixStats’, ‘ScaledMatrix’, ‘irlba’, ‘rsvd’, ‘BiocNeighbors’, ‘SingleCellExperiment’, ‘scuttle’, ‘SummarizedExperiment’, ‘igraph’, ‘DelayedArray’, ‘DelayedMatrixStats’, ‘BiocSingular’, ‘bluster’, ‘beachmat’
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/S4Arrays_1.2.1.tar.gz'
+Content type 'application/gzip' length 282089 bytes (275 KB)
+==================================================
+downloaded 275 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/SparseArray_1.2.4.tar.gz'
+Content type 'application/gzip' length 367778 bytes (359 KB)
+==================================================
+downloaded 359 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/sparseMatrixStats_1.14.0.tar.gz'
+Content type 'application/gzip' length 703089 bytes (686 KB)
+==================================================
+downloaded 686 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/ScaledMatrix_1.10.0.tar.gz'
+Content type 'application/gzip' length 313034 bytes (305 KB)
+==================================================
+downloaded 305 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/irlba_2.3.7.tar.gz'
+Content type 'application/x-gzip' length 391622 bytes (382 KB)
+==================================================
+downloaded 382 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/rsvd_1.0.5.tar.gz'
+Content type 'application/x-gzip' length 3458090 bytes (3.3 MB)
+==================================================
+downloaded 3.3 MB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/BiocNeighbors_1.20.2.tar.gz'
+Content type 'application/gzip' length 1039738 bytes (1015 KB)
+==================================================
+downloaded 1015 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/SingleCellExperiment_1.24.0.tar.gz'
+Content type 'application/gzip' length 985002 bytes (961 KB)
+==================================================
+downloaded 961 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/scuttle_1.12.0.tar.gz'
+Content type 'application/gzip' length 1029515 bytes (1005 KB)
+==================================================
+downloaded 1005 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/SummarizedExperiment_1.32.0.tar.gz'
+Content type 'application/gzip' length 686052 bytes (669 KB)
+==================================================
+downloaded 669 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/igraph_2.3.3.tar.gz'
+Content type 'application/x-gzip' length 5215250 bytes (5.0 MB)
+==================================================
+downloaded 5.0 MB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/DelayedArray_0.28.0.tar.gz'
+Content type 'application/gzip' length 624166 bytes (609 KB)
+==================================================
+downloaded 609 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/DelayedMatrixStats_1.24.0.tar.gz'
+Content type 'application/gzip' length 271120 bytes (264 KB)
+==================================================
+downloaded 264 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/BiocSingular_1.18.0.tar.gz'
+Content type 'application/gzip' length 616448 bytes (602 KB)
+==================================================
+downloaded 602 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/bluster_1.12.0.tar.gz'
+Content type 'application/gzip' length 2995786 bytes (2.9 MB)
+==================================================
+downloaded 2.9 MB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/beachmat_2.18.1.tar.gz'
+Content type 'application/gzip' length 512143 bytes (500 KB)
+==================================================
+downloaded 500 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/scran_1.30.2.tar.gz'
+Content type 'application/gzip' length 1802446 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+ERROR: dependency ‘Matrix’ is not available for package ‘S4Arrays’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/S4Arrays’
+ERROR: dependency ‘Matrix’ is not available for package ‘sparseMatrixStats’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/sparseMatrixStats’
+ERROR: dependency ‘Matrix’ is not available for package ‘irlba’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/irlba’
+ERROR: dependency ‘Matrix’ is not available for package ‘rsvd’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/rsvd’
+ERROR: dependency ‘Matrix’ is not available for package ‘BiocNeighbors’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/BiocNeighbors’
+ERROR: dependency ‘Matrix’ is not available for package ‘igraph’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/igraph’
+ERROR: dependencies ‘Matrix’, ‘S4Arrays’ are not available for package ‘SparseArray’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/SparseArray’
+ERROR: dependencies ‘Matrix’, ‘igraph’, ‘BiocNeighbors’ are not available for package ‘bluster’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/bluster’
+ERROR: dependencies ‘Matrix’, ‘S4Arrays’, ‘SparseArray’ are not available for package ‘DelayedArray’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/DelayedArray’
+ERROR: dependencies ‘Matrix’, ‘DelayedArray’ are not available for package ‘ScaledMatrix’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/ScaledMatrix’
+ERROR: dependencies ‘Matrix’, ‘S4Arrays’, ‘DelayedArray’ are not available for package ‘SummarizedExperiment’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/SummarizedExperiment’
+ERROR: dependencies ‘DelayedArray’, ‘sparseMatrixStats’, ‘Matrix’ are not available for package ‘DelayedMatrixStats’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/DelayedMatrixStats’
+ERROR: dependencies ‘DelayedArray’, ‘SparseArray’, ‘Matrix’ are not available for package ‘beachmat’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/beachmat’
+ERROR: dependencies ‘SummarizedExperiment’, ‘DelayedArray’ are not available for package ‘SingleCellExperiment’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/SingleCellExperiment’
+ERROR: dependencies ‘Matrix’, ‘DelayedArray’, ‘ScaledMatrix’, ‘irlba’, ‘rsvd’, ‘beachmat’ are not available for package ‘BiocSingular’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/BiocSingular’
+ERROR: dependencies ‘SingleCellExperiment’, ‘Matrix’, ‘SummarizedExperiment’, ‘DelayedArray’, ‘DelayedMatrixStats’, ‘beachmat’ are not available for package ‘scuttle’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/scuttle’
+ERROR: dependencies ‘SingleCellExperiment’, ‘scuttle’, ‘SummarizedExperiment’, ‘Matrix’, ‘igraph’, ‘DelayedArray’, ‘DelayedMatrixStats’, ‘BiocSingular’, ‘bluster’, ‘beachmat’ are not available for package ‘scran’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/scran’
+
+The downloaded source packages are in
+	‘/tmp/RtmpVRcRDp/downloaded_packages’
+Updating HTML index of packages in '.Library'
+Making 'packages.html' ... done
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.27), R 4.3.1 (2023-06-16)
+Installing package(s) 'bluster'
+Warning: dependency ‘Matrix’ is not available
+also installing the dependencies ‘igraph’, ‘BiocNeighbors’
+
+trying URL 'https://cloud.r-project.org/src/contrib/igraph_2.3.3.tar.gz'
+Content type 'application/x-gzip' length 5215250 bytes (5.0 MB)
+==================================================
+downloaded 5.0 MB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/BiocNeighbors_1.20.2.tar.gz'
+Content type 'application/gzip' length 1039738 bytes (1015 KB)
+==================================================
+downloaded 1015 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/bluster_1.12.0.tar.gz'
+Content type 'application/gzip' length 2995786 bytes (2.9 MB)
+==================================================
+downloaded 2.9 MB
+
+ERROR: dependency ‘Matrix’ is not available for package ‘igraph’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/igraph’
+ERROR: dependency ‘Matrix’ is not available for package ‘BiocNeighbors’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/BiocNeighbors’
+ERROR: dependencies ‘Matrix’, ‘igraph’, ‘BiocNeighbors’ are not available for package ‘bluster’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/bluster’
+
+The downloaded source packages are in
+	‘/tmp/RtmpVRcRDp/downloaded_packages’
+Updating HTML index of packages in '.Library'
+Making 'packages.html' ... done
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.27), R 4.3.1 (2023-06-16)
+Installing package(s) 'igraph'
+Warning: dependency ‘Matrix’ is not available
+trying URL 'https://cloud.r-project.org/src/contrib/igraph_2.3.3.tar.gz'
+Content type 'application/x-gzip' length 5215250 bytes (5.0 MB)
+==================================================
+downloaded 5.0 MB
+
+ERROR: dependency ‘Matrix’ is not available for package ‘igraph’
+* removing ‘/userhome/conda/envs/hgsoc_pipeline/lib/R/library/igraph’
+
+The downloaded source packages are in
+	‘/tmp/RtmpVRcRDp/downloaded_packages’
+Updating HTML index of packages in '.Library'
+Making 'packages.html' ... done
+There were 50 or more warnings (use warnings() to see the first 50)
+>> Skipping optional tools (set INSTALL_OPTIONAL=1 to attempt them). Fallbacks will be used.
+
+CORE packages installed: FALSE 
+  optional infercnv   : absent -> [FALLBACK]
+  optional BayesPrism : absent -> [FALLBACK]
+  optional spacexr    : absent -> [FALLBACK]
+Error: Some core packages failed to install — see messages above.
+Execution halted
