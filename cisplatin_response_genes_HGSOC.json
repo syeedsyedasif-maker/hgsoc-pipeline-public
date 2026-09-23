@@ -14,7 +14,11 @@
       "C": "emerging / limited / single-study / contested"
     },
     "caveat": "No molecular predictor of platinum resistance is clinically validated in HGSOC (ESMO-ESGO). Use as hypotheses / module-scoring inputs, not clinical stratifiers.",
-    "n_genes": 38
+    "n_genes": 38,
+    "geneset_sources": {
+      "cheon2014_collagen": "Cheon et al. 2014, Clin Cancer Res 20(3):711-723, doi 10.1158/1078-0432.CCR-13-1256",
+      "resistance_up_intrinsic": "resistance_up_core minus stress (FOS, JUN, NR4A1) and extrinsic/stromal (COL11A1, LOX, FABP4, IL6, STAT3, STAB1) genes; added in analysis plan v1.1"
+    }
   },
   "genes": [
     {
@@ -836,6 +840,34 @@
       "BRCA2",
       "SLFN11",
       "CCNE1"
+    ],
+    "cheon2014_collagen": [
+      "AEBP1",
+      "COL11A1",
+      "COL5A1",
+      "COL6A2",
+      "LOX",
+      "POSTN",
+      "SNAI2",
+      "THBS2",
+      "TIMP3",
+      "VCAN"
+    ],
+    "resistance_up_intrinsic": [
+      "RAD51",
+      "ERCC1",
+      "ERCC4",
+      "CCNE1",
+      "MYC",
+      "ATP7B",
+      "ATP7A",
+      "ABCB1",
+      "ABCA1",
+      "GSTP1",
+      "NFE2L2",
+      "BCL2",
+      "BIRC5",
+      "ALDH1A1"
     ]
   }
 }

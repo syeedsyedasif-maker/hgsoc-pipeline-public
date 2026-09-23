@@ -2,7 +2,7 @@
 
 **Project:** Patient-level single-cell analysis of platinum resistance in HGSOC (GSE165897), with validation in TCGA-OV
 **Author:** Syeed Syed Asif
-**Version:** 1.0, 23 September 2026
+**Version:** 1.1, 23 September 2026. Changes from 1.0 are listed in DEVIATIONS.md; all were made before any resistant-versus-sensitive result was seen.
 **Status:** Committed before any resistant-versus-sensitive comparison was run. Earlier Stage 2 runs compared post-NACT with treatment-naive samples only.
 
 ## 1. Question
@@ -30,8 +30,8 @@ Two tests, both in TN samples, PFI labels, using `limma::fry` (directional), Hol
 
 | ID | Cell type | Gene set | Expected direction in resistant |
 |---|---|---|---|
-| P1 | CAFs | Cheon et al. (2014) collagen-remodelling signature | Up |
-| P2 | Malignant | `resistance_up_core` (project gene-set JSON) | Up |
+| P1 | CAFs | Cheon et al. (2014) collagen-remodelling signature (`cheon2014_collagen`, 10 genes) | Up |
+| P2 | Malignant | `resistance_up_intrinsic` (14 genes; `resistance_up_core` without the stress and extrinsic genes) | Up |
 
 A primary result is positive only if Holm-adjusted p < 0.05 in the expected direction. Effect sizes are reported as the mean log2 fold change across set genes, with the number of patients per group.
 
@@ -42,12 +42,12 @@ A primary result is positive only if Holm-adjusted p < 0.05 in the expected dire
 ## 6. Secondary analyses (exploratory; Benjamini-Hochberg within each family)
 
 1. P1 and P2 repeated with CRS labels.
-2. P1 with `matrix_CAF` in place of the Cheon signature; P2 with inferCNV-confirmed malignant cells.
-3. Other project gene sets (`sensitivity_up`, `drug_efflux`, `partial_EMT_Xu2022`, `extrinsic_TME`) in malignant cells, CAFs and macrophages.
+2. P2 repeated with inferCNV-confirmed malignant cells.
+3. `drug_efflux` and `extrinsic_TME` in malignant cells, CAFs and macrophages, where >= 5 genes survive filtering. Sets below the 5-gene minimum (`matrix_CAF`, `sensitivity_up`, `partial_EMT_Xu2022`) are reported only within the gene-level results.
 4. Resistance x timepoint interaction: paired design, `~ patient + group:timepoint`.
 5. Gene-level differential expression per cell type. Reported as exploratory only; no gene-level result is claimed as a finding.
 6. Cell-type composition: `speckle::propeller` on per-sample proportions (logit transform).
-7. Cell-cell communication in TN samples, inferred per patient. Pre-specified axes: malignant to CAF, CAF to malignant, macrophage to malignant. Patient-level interaction scores compared between groups (Wilcoxon).
+7. Cell-cell communication in TN samples, inferred per patient. Pre-specified axes: malignant to CAF, CAF to malignant, macrophage to malignant. Patient-level interaction scores compared between groups (Wilcoxon). Tool: liana-py (rank_aggregate by sample).
 
 ## 7. TCGA-OV validation (run once)
 
