@@ -18,7 +18,8 @@
 #        and none is invented here.
 # INPUT: raw_data/GSE180661/GSE180661_matrix.h5        (32,555,276,423 bytes)
 #        raw_data/GSE180661/GSE180661_GEO_cells.tsv.gz (42,728,783 bytes)
-# OUTPUT: data/sce_site_comparison.rds
+# OUTPUT: data/sce_site_comparison.rds (gzip-compressed; counts and logcounts
+#        both stored as sparse dgCMatrix -- asserted before saveRDS)
 # HOW TO READ: table(sce$site) gives the ascites/omental/other split;
 #        table(sce$patient_id, sce$site) shows the paired structure. ALWAYS
 #        read composition alongside sce$sort_parameters -- see CAVEAT 1.
@@ -332,6 +333,18 @@ rowData(sce)$arm   <- paste0(coords$chromosome_name, substr(coords$band, 1, 1))
 # ---- 5. normalise ------------------------------------------------------------
 log_msg("normalising (scater::logNormCounts) ...")
 sce <- scater::logNormCounts(sce)
+# Pin logcounts to a plain dgCMatrix before saving. At this scale scuttle may
+# return a DelayedMatrix instead, and serialising one drags its seed and delayed
+# ops along with it; a dense matrix would be ~121GB (21.6k genes x 700k cells x
+# 8 bytes). log1p keeps zeros at zero, so logcounts has exactly counts' sparsity.
+lc <- logcounts(sce, withDimnames = FALSE)
+if (!is(lc, "dgCMatrix")) lc <- as(lc, "dgCMatrix")
+logcounts(sce, withDimnames = FALSE) <- lc
+rm(lc); invisible(gc())
+stopifnot("counts must be a sparse dgCMatrix"    = is(counts(sce), "dgCMatrix"),
+          "logcounts must be a sparse dgCMatrix" = is(logcounts(sce), "dgCMatrix"))
+log_msg("assays stored sparse (dgCMatrix); in-memory size:",
+        format(object.size(sce), units = "GB"))
 
 # ---- 6. write ----------------------------------------------------------------
 if (!dir.exists("data")) dir.create("data")
