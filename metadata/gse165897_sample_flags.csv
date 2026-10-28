@@ -1,0 +1,23 @@
+patient_id,timepoint,treatment_phase,sample,site,frozen,source
+EOC1005,TN,treatment-naive,EOC1005_primary_Peritoneum,Peritoneum,no,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC1005,PN,post-NACT,EOC1005_interval_Tumor,Tumor,yes,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC136,TN,treatment-naive,EOC136_primary_Mesentery,Mesentery,no,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC136,PN,post-NACT,EOC136_interval_Omentum,Omentum,no,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC153,TN,treatment-naive,EOC153_primary_Omentum,Omentum,no,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC153,PN,post-NACT,EOC153_interval_Omentum,Omentum,no,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC227,TN,treatment-naive,EOC227_primary_Omentum,Omentum,yes,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC227,PN,post-NACT,EOC227_interval_Omentum,Omentum,yes,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC3,TN,treatment-naive,EOC3_primary_Peritoneum,Peritoneum,yes,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC3,PN,post-NACT,EOC3_interval_Omentum,Omentum,no,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC349,TN,treatment-naive,EOC349_primary_Peritoneum,Peritoneum,yes,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC349,PN,post-NACT,EOC349_interval_Omentum,Omentum,yes,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC372,TN,treatment-naive,EOC372_primary_Peritoneum,Peritoneum,no,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC372,PN,post-NACT,EOC372_interval_Peritoneum,Peritoneum,no,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC443,TN,treatment-naive,EOC443_primary_Omentum,Omentum,no,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC443,PN,post-NACT,EOC443_interval_Omentum,Omentum,no,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC540,TN,treatment-naive,EOC540_primary_Omentum,Omentum,no,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC540,PN,post-NACT,EOC540_interval_Omentum,Omentum,no,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC733,TN,treatment-naive,EOC733_primary_Peritoneum,Peritoneum,no,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC733,PN,post-NACT,EOC733_interval_Omentum,Omentum,no,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC87,TN,treatment-naive,EOC87_primary_Peritoneum,Peritoneum,no,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC87,PN,post-NACT,EOC87_interval_Omentum,Omentum,no,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
