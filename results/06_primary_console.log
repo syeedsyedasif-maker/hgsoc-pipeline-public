@@ -1,0 +1,40 @@
+There were 15 warnings (use warnings() to see them)
+Warning message:
+package ‘yaml’ was built under R version 4.3.3 
+==========================================================================
+  06_primary_resistance.R — primary resistant-vs-sensitive (plan v1.1 + D1-D5)   [profile: real | seed: 1000 | threads: 1]
+==========================================================================
+  - run mode: TRUE_LABELS | outputs -> results/06_primary 
+  - --- primary (plan s4) --- 
+  - P1             fibroblast      group       pseudobulks= 9 | resistant=6 sensitive=3 | cells/pseudobulk 25-904 
+  - P2             malignant       group       pseudobulks=11 | resistant=7 sensitive=4 | cells/pseudobulk 30-1550 
+  - --- positive control (plan s5) --- 
+  - PC             malignant       paired      pseudobulks=20 | pairs=10 | cells/pseudobulk 30-2427 
+  - --- secondary (plan s6.1-6.5) --- 
+  - S1-P1          fibroblast      group       pseudobulks= 9 | poor_response=2 response=7 | cells/pseudobulk 25-904 
+  - S1-P1          NOT ESTIMABLE: fewer than 3 patients per group 
+  - S1-P2          malignant       group       pseudobulks=11 | poor_response=3 response=8 | cells/pseudobulk 30-1550 
+  - S2-P2          malignant_both  group       pseudobulks= 9 | resistant=5 sensitive=4 | cells/pseudobulk 55-771 
+  - S3-malignant   malignant       group       pseudobulks=11 | resistant=7 sensitive=4 | cells/pseudobulk 30-1550 
+  - S3-fibroblast  fibroblast      group       pseudobulks= 9 | resistant=6 sensitive=3 | cells/pseudobulk 25-904 
+  - S3-macrophage  macrophage      group       pseudobulks= 8 | resistant=5 sensitive=3 | cells/pseudobulk 90-1294 
+  - S4-CAF         fibroblast      interaction pseudobulks=16 | resistant=5 sensitive=3 | cells/pseudobulk 40-2106 
+  - S4-mal         malignant       interaction pseudobulks=20 | resistant=6 sensitive=4 | cells/pseudobulk 30-2427 
+  - S5-endothelial endothelial     group       pseudobulks= 0 | resistant=0 sensitive=0 | cells/pseudobulk - 
+  - S5-endothelial NOT ESTIMABLE: fewer than 3 patients per group 
+  - S5-fibroblast  fibroblast      group       pseudobulks= 9 | resistant=6 sensitive=3 | cells/pseudobulk 25-904 
+  - S5-macrophage  macrophage      group       pseudobulks= 8 | resistant=5 sensitive=3 | cells/pseudobulk 90-1294 
+  - S5-malignant   malignant       group       pseudobulks=11 | resistant=7 sensitive=4 | cells/pseudobulk 30-1550 
+  - S5-Tcell       Tcell           group       pseudobulks=10 | resistant=6 sensitive=4 | cells/pseudobulk 185-2157 
+  - --- sensitivity (D4, D5) --- 
+  - D4-PC          malignant       paired      pseudobulks=16 | pairs=8 | cells/pseudobulk 30-2427 
+  - D5a-PC         malignant       paired      pseudobulks= 8 | pairs=4 | cells/pseudobulk 57-1086 
+  - D5a-S4-CAF     fibroblast      interaction pseudobulks= 8 | resistant=2 sensitive=2 | cells/pseudobulk 77-2106 
+  - D5a-S4-CAF     NOT ESTIMABLE: fewer than 3 patients per group 
+  - D5a-S4-mal     malignant       interaction pseudobulks= 8 | resistant=1 sensitive=3 | cells/pseudobulk 57-1086 
+  - D5a-S4-mal     NOT ESTIMABLE: fewer than 3 patients per group 
+  - D5b-P1         fibroblast      group       pseudobulks= 9 | resistant=6 sensitive=3 | cells/pseudobulk 25-904 
+  - D5b-P2         malignant       group       pseudobulks=11 | resistant=7 sensitive=4 | cells/pseudobulk 30-1550 
+  - sessionInfo -> results/06_primary/06_sessionInfo.txt 
+  - done: 21 set-test rows written; 4 analyses not estimable: S1-P1 (fewer than 3 patients per group); S5-endothelial (fewer than 3 patients per group); D5a-S4-CAF (fewer than 3 patients per group); D5a-S4-mal (fewer than 3 patients per group) 
+  - test statistics are in results/06_primary/06_geneset_tests.csv (not printed) 

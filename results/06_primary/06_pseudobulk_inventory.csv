@@ -1,0 +1,317 @@
+run_mode,analysis_id,population,patient_id,treatment_phase,group,n_cells,included,reason
+TRUE_LABELS,P1,fibroblast,EOC1005,treatment-naive,resistant,133,TRUE,
+TRUE_LABELS,P1,fibroblast,EOC136,treatment-naive,sensitive,904,TRUE,
+TRUE_LABELS,P1,fibroblast,EOC153,treatment-naive,sensitive,91,TRUE,
+TRUE_LABELS,P1,fibroblast,EOC227,treatment-naive,sensitive,7,FALSE,fewer than 20 cells
+TRUE_LABELS,P1,fibroblast,EOC3,treatment-naive,resistant,57,TRUE,
+TRUE_LABELS,P1,fibroblast,EOC349,treatment-naive,resistant,25,TRUE,
+TRUE_LABELS,P1,fibroblast,EOC372,treatment-naive,sensitive,77,TRUE,
+TRUE_LABELS,P1,fibroblast,EOC443,treatment-naive,resistant,305,TRUE,
+TRUE_LABELS,P1,fibroblast,EOC540,treatment-naive,resistant,133,TRUE,
+TRUE_LABELS,P1,fibroblast,EOC733,treatment-naive,resistant,2,FALSE,fewer than 20 cells
+TRUE_LABELS,P1,fibroblast,EOC87,treatment-naive,resistant,40,TRUE,
+TRUE_LABELS,P2,malignant,EOC1005,treatment-naive,resistant,487,TRUE,
+TRUE_LABELS,P2,malignant,EOC136,treatment-naive,sensitive,205,TRUE,
+TRUE_LABELS,P2,malignant,EOC153,treatment-naive,sensitive,330,TRUE,
+TRUE_LABELS,P2,malignant,EOC227,treatment-naive,sensitive,57,TRUE,
+TRUE_LABELS,P2,malignant,EOC3,treatment-naive,resistant,203,TRUE,
+TRUE_LABELS,P2,malignant,EOC349,treatment-naive,resistant,30,TRUE,
+TRUE_LABELS,P2,malignant,EOC372,treatment-naive,sensitive,281,TRUE,
+TRUE_LABELS,P2,malignant,EOC443,treatment-naive,resistant,1086,TRUE,
+TRUE_LABELS,P2,malignant,EOC540,treatment-naive,resistant,202,TRUE,
+TRUE_LABELS,P2,malignant,EOC733,treatment-naive,resistant,1550,TRUE,
+TRUE_LABELS,P2,malignant,EOC87,treatment-naive,resistant,136,TRUE,
+TRUE_LABELS,PC,malignant,EOC1005,post-NACT,,418,TRUE,
+TRUE_LABELS,PC,malignant,EOC1005,treatment-naive,,487,TRUE,
+TRUE_LABELS,PC,malignant,EOC136,post-NACT,,2427,TRUE,
+TRUE_LABELS,PC,malignant,EOC136,treatment-naive,,205,TRUE,
+TRUE_LABELS,PC,malignant,EOC153,post-NACT,,116,TRUE,
+TRUE_LABELS,PC,malignant,EOC153,treatment-naive,,330,TRUE,
+TRUE_LABELS,PC,malignant,EOC227,post-NACT,,174,TRUE,
+TRUE_LABELS,PC,malignant,EOC227,treatment-naive,,57,TRUE,
+TRUE_LABELS,PC,malignant,EOC3,post-NACT,,223,TRUE,
+TRUE_LABELS,PC,malignant,EOC3,treatment-naive,,203,TRUE,
+TRUE_LABELS,PC,malignant,EOC349,post-NACT,,66,TRUE,
+TRUE_LABELS,PC,malignant,EOC349,treatment-naive,,30,TRUE,
+TRUE_LABELS,PC,malignant,EOC372,post-NACT,,131,TRUE,
+TRUE_LABELS,PC,malignant,EOC372,treatment-naive,,281,TRUE,
+TRUE_LABELS,PC,malignant,EOC443,post-NACT,,103,TRUE,
+TRUE_LABELS,PC,malignant,EOC443,treatment-naive,,1086,TRUE,
+TRUE_LABELS,PC,malignant,EOC540,post-NACT,,18,FALSE,fewer than 20 cells
+TRUE_LABELS,PC,malignant,EOC540,treatment-naive,,202,FALSE,other timepoint excluded (unpaired)
+TRUE_LABELS,PC,malignant,EOC733,post-NACT,,372,TRUE,
+TRUE_LABELS,PC,malignant,EOC733,treatment-naive,,1550,TRUE,
+TRUE_LABELS,PC,malignant,EOC87,post-NACT,,191,TRUE,
+TRUE_LABELS,PC,malignant,EOC87,treatment-naive,,136,TRUE,
+TRUE_LABELS,S1-P1,fibroblast,EOC1005,treatment-naive,response,133,TRUE,
+TRUE_LABELS,S1-P1,fibroblast,EOC136,treatment-naive,response,904,TRUE,
+TRUE_LABELS,S1-P1,fibroblast,EOC153,treatment-naive,response,91,TRUE,
+TRUE_LABELS,S1-P1,fibroblast,EOC227,treatment-naive,response,7,FALSE,fewer than 20 cells
+TRUE_LABELS,S1-P1,fibroblast,EOC3,treatment-naive,response,57,TRUE,
+TRUE_LABELS,S1-P1,fibroblast,EOC349,treatment-naive,response,25,TRUE,
+TRUE_LABELS,S1-P1,fibroblast,EOC372,treatment-naive,poor_response,77,TRUE,
+TRUE_LABELS,S1-P1,fibroblast,EOC443,treatment-naive,response,305,TRUE,
+TRUE_LABELS,S1-P1,fibroblast,EOC540,treatment-naive,response,133,TRUE,
+TRUE_LABELS,S1-P1,fibroblast,EOC733,treatment-naive,poor_response,2,FALSE,fewer than 20 cells
+TRUE_LABELS,S1-P1,fibroblast,EOC87,treatment-naive,poor_response,40,TRUE,
+TRUE_LABELS,S1-P2,malignant,EOC1005,treatment-naive,response,487,TRUE,
+TRUE_LABELS,S1-P2,malignant,EOC136,treatment-naive,response,205,TRUE,
+TRUE_LABELS,S1-P2,malignant,EOC153,treatment-naive,response,330,TRUE,
+TRUE_LABELS,S1-P2,malignant,EOC227,treatment-naive,response,57,TRUE,
+TRUE_LABELS,S1-P2,malignant,EOC3,treatment-naive,response,203,TRUE,
+TRUE_LABELS,S1-P2,malignant,EOC349,treatment-naive,response,30,TRUE,
+TRUE_LABELS,S1-P2,malignant,EOC372,treatment-naive,poor_response,281,TRUE,
+TRUE_LABELS,S1-P2,malignant,EOC443,treatment-naive,response,1086,TRUE,
+TRUE_LABELS,S1-P2,malignant,EOC540,treatment-naive,response,202,TRUE,
+TRUE_LABELS,S1-P2,malignant,EOC733,treatment-naive,poor_response,1550,TRUE,
+TRUE_LABELS,S1-P2,malignant,EOC87,treatment-naive,poor_response,136,TRUE,
+TRUE_LABELS,S2-P2,malignant_both,EOC1005,treatment-naive,resistant,412,TRUE,
+TRUE_LABELS,S2-P2,malignant_both,EOC136,treatment-naive,sensitive,153,TRUE,
+TRUE_LABELS,S2-P2,malignant_both,EOC153,treatment-naive,sensitive,119,TRUE,
+TRUE_LABELS,S2-P2,malignant_both,EOC227,treatment-naive,sensitive,55,TRUE,
+TRUE_LABELS,S2-P2,malignant_both,EOC3,treatment-naive,resistant,16,FALSE,fewer than 20 cells
+TRUE_LABELS,S2-P2,malignant_both,EOC349,treatment-naive,resistant,19,FALSE,fewer than 20 cells
+TRUE_LABELS,S2-P2,malignant_both,EOC372,treatment-naive,sensitive,162,TRUE,
+TRUE_LABELS,S2-P2,malignant_both,EOC443,treatment-naive,resistant,771,TRUE,
+TRUE_LABELS,S2-P2,malignant_both,EOC540,treatment-naive,resistant,134,TRUE,
+TRUE_LABELS,S2-P2,malignant_both,EOC733,treatment-naive,resistant,629,TRUE,
+TRUE_LABELS,S2-P2,malignant_both,EOC87,treatment-naive,resistant,73,TRUE,
+TRUE_LABELS,S3-malignant,malignant,EOC1005,treatment-naive,resistant,487,TRUE,
+TRUE_LABELS,S3-malignant,malignant,EOC136,treatment-naive,sensitive,205,TRUE,
+TRUE_LABELS,S3-malignant,malignant,EOC153,treatment-naive,sensitive,330,TRUE,
+TRUE_LABELS,S3-malignant,malignant,EOC227,treatment-naive,sensitive,57,TRUE,
+TRUE_LABELS,S3-malignant,malignant,EOC3,treatment-naive,resistant,203,TRUE,
+TRUE_LABELS,S3-malignant,malignant,EOC349,treatment-naive,resistant,30,TRUE,
+TRUE_LABELS,S3-malignant,malignant,EOC372,treatment-naive,sensitive,281,TRUE,
+TRUE_LABELS,S3-malignant,malignant,EOC443,treatment-naive,resistant,1086,TRUE,
+TRUE_LABELS,S3-malignant,malignant,EOC540,treatment-naive,resistant,202,TRUE,
+TRUE_LABELS,S3-malignant,malignant,EOC733,treatment-naive,resistant,1550,TRUE,
+TRUE_LABELS,S3-malignant,malignant,EOC87,treatment-naive,resistant,136,TRUE,
+TRUE_LABELS,S3-fibroblast,fibroblast,EOC1005,treatment-naive,resistant,133,TRUE,
+TRUE_LABELS,S3-fibroblast,fibroblast,EOC136,treatment-naive,sensitive,904,TRUE,
+TRUE_LABELS,S3-fibroblast,fibroblast,EOC153,treatment-naive,sensitive,91,TRUE,
+TRUE_LABELS,S3-fibroblast,fibroblast,EOC227,treatment-naive,sensitive,7,FALSE,fewer than 20 cells
+TRUE_LABELS,S3-fibroblast,fibroblast,EOC3,treatment-naive,resistant,57,TRUE,
+TRUE_LABELS,S3-fibroblast,fibroblast,EOC349,treatment-naive,resistant,25,TRUE,
+TRUE_LABELS,S3-fibroblast,fibroblast,EOC372,treatment-naive,sensitive,77,TRUE,
+TRUE_LABELS,S3-fibroblast,fibroblast,EOC443,treatment-naive,resistant,305,TRUE,
+TRUE_LABELS,S3-fibroblast,fibroblast,EOC540,treatment-naive,resistant,133,TRUE,
+TRUE_LABELS,S3-fibroblast,fibroblast,EOC733,treatment-naive,resistant,2,FALSE,fewer than 20 cells
+TRUE_LABELS,S3-fibroblast,fibroblast,EOC87,treatment-naive,resistant,40,TRUE,
+TRUE_LABELS,S3-macrophage,macrophage,EOC1005,treatment-naive,resistant,17,FALSE,fewer than 20 cells
+TRUE_LABELS,S3-macrophage,macrophage,EOC136,treatment-naive,sensitive,420,TRUE,
+TRUE_LABELS,S3-macrophage,macrophage,EOC153,treatment-naive,sensitive,274,TRUE,
+TRUE_LABELS,S3-macrophage,macrophage,EOC227,treatment-naive,sensitive,269,TRUE,
+TRUE_LABELS,S3-macrophage,macrophage,EOC3,treatment-naive,resistant,1294,TRUE,
+TRUE_LABELS,S3-macrophage,macrophage,EOC349,treatment-naive,resistant,14,FALSE,fewer than 20 cells
+TRUE_LABELS,S3-macrophage,macrophage,EOC372,treatment-naive,sensitive,5,FALSE,fewer than 20 cells
+TRUE_LABELS,S3-macrophage,macrophage,EOC443,treatment-naive,resistant,318,TRUE,
+TRUE_LABELS,S3-macrophage,macrophage,EOC540,treatment-naive,resistant,521,TRUE,
+TRUE_LABELS,S3-macrophage,macrophage,EOC733,treatment-naive,resistant,90,TRUE,
+TRUE_LABELS,S3-macrophage,macrophage,EOC87,treatment-naive,resistant,259,TRUE,
+TRUE_LABELS,S4-CAF,fibroblast,EOC1005,post-NACT,resistant,54,TRUE,
+TRUE_LABELS,S4-CAF,fibroblast,EOC1005,treatment-naive,resistant,133,TRUE,
+TRUE_LABELS,S4-CAF,fibroblast,EOC136,post-NACT,sensitive,300,TRUE,
+TRUE_LABELS,S4-CAF,fibroblast,EOC136,treatment-naive,sensitive,904,TRUE,
+TRUE_LABELS,S4-CAF,fibroblast,EOC153,post-NACT,sensitive,441,TRUE,
+TRUE_LABELS,S4-CAF,fibroblast,EOC153,treatment-naive,sensitive,91,TRUE,
+TRUE_LABELS,S4-CAF,fibroblast,EOC227,post-NACT,sensitive,13,FALSE,fewer than 20 cells
+TRUE_LABELS,S4-CAF,fibroblast,EOC227,treatment-naive,sensitive,7,FALSE,fewer than 20 cells
+TRUE_LABELS,S4-CAF,fibroblast,EOC3,post-NACT,resistant,260,TRUE,
+TRUE_LABELS,S4-CAF,fibroblast,EOC3,treatment-naive,resistant,57,TRUE,
+TRUE_LABELS,S4-CAF,fibroblast,EOC349,post-NACT,resistant,1,FALSE,fewer than 20 cells
+TRUE_LABELS,S4-CAF,fibroblast,EOC349,treatment-naive,resistant,25,FALSE,other timepoint excluded (unpaired)
+TRUE_LABELS,S4-CAF,fibroblast,EOC372,post-NACT,sensitive,2106,TRUE,
+TRUE_LABELS,S4-CAF,fibroblast,EOC372,treatment-naive,sensitive,77,TRUE,
+TRUE_LABELS,S4-CAF,fibroblast,EOC443,post-NACT,resistant,197,TRUE,
+TRUE_LABELS,S4-CAF,fibroblast,EOC443,treatment-naive,resistant,305,TRUE,
+TRUE_LABELS,S4-CAF,fibroblast,EOC540,post-NACT,resistant,358,TRUE,
+TRUE_LABELS,S4-CAF,fibroblast,EOC540,treatment-naive,resistant,133,TRUE,
+TRUE_LABELS,S4-CAF,fibroblast,EOC733,post-NACT,resistant,15,FALSE,fewer than 20 cells
+TRUE_LABELS,S4-CAF,fibroblast,EOC733,treatment-naive,resistant,2,FALSE,fewer than 20 cells
+TRUE_LABELS,S4-CAF,fibroblast,EOC87,post-NACT,resistant,141,TRUE,
+TRUE_LABELS,S4-CAF,fibroblast,EOC87,treatment-naive,resistant,40,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC1005,post-NACT,resistant,418,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC1005,treatment-naive,resistant,487,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC136,post-NACT,sensitive,2427,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC136,treatment-naive,sensitive,205,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC153,post-NACT,sensitive,116,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC153,treatment-naive,sensitive,330,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC227,post-NACT,sensitive,174,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC227,treatment-naive,sensitive,57,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC3,post-NACT,resistant,223,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC3,treatment-naive,resistant,203,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC349,post-NACT,resistant,66,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC349,treatment-naive,resistant,30,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC372,post-NACT,sensitive,131,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC372,treatment-naive,sensitive,281,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC443,post-NACT,resistant,103,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC443,treatment-naive,resistant,1086,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC540,post-NACT,resistant,18,FALSE,fewer than 20 cells
+TRUE_LABELS,S4-mal,malignant,EOC540,treatment-naive,resistant,202,FALSE,other timepoint excluded (unpaired)
+TRUE_LABELS,S4-mal,malignant,EOC733,post-NACT,resistant,372,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC733,treatment-naive,resistant,1550,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC87,post-NACT,resistant,191,TRUE,
+TRUE_LABELS,S4-mal,malignant,EOC87,treatment-naive,resistant,136,TRUE,
+TRUE_LABELS,S5-endothelial,endothelial,EOC1005,treatment-naive,resistant,4,FALSE,fewer than 20 cells
+TRUE_LABELS,S5-endothelial,endothelial,EOC136,treatment-naive,sensitive,5,FALSE,fewer than 20 cells
+TRUE_LABELS,S5-endothelial,endothelial,EOC153,treatment-naive,sensitive,9,FALSE,fewer than 20 cells
+TRUE_LABELS,S5-endothelial,endothelial,EOC227,treatment-naive,sensitive,2,FALSE,fewer than 20 cells
+TRUE_LABELS,S5-endothelial,endothelial,EOC349,treatment-naive,resistant,3,FALSE,fewer than 20 cells
+TRUE_LABELS,S5-endothelial,endothelial,EOC372,treatment-naive,sensitive,1,FALSE,fewer than 20 cells
+TRUE_LABELS,S5-endothelial,endothelial,EOC443,treatment-naive,resistant,9,FALSE,fewer than 20 cells
+TRUE_LABELS,S5-endothelial,endothelial,EOC540,treatment-naive,resistant,7,FALSE,fewer than 20 cells
+TRUE_LABELS,S5-fibroblast,fibroblast,EOC1005,treatment-naive,resistant,133,TRUE,
+TRUE_LABELS,S5-fibroblast,fibroblast,EOC136,treatment-naive,sensitive,904,TRUE,
+TRUE_LABELS,S5-fibroblast,fibroblast,EOC153,treatment-naive,sensitive,91,TRUE,
+TRUE_LABELS,S5-fibroblast,fibroblast,EOC227,treatment-naive,sensitive,7,FALSE,fewer than 20 cells
+TRUE_LABELS,S5-fibroblast,fibroblast,EOC3,treatment-naive,resistant,57,TRUE,
+TRUE_LABELS,S5-fibroblast,fibroblast,EOC349,treatment-naive,resistant,25,TRUE,
+TRUE_LABELS,S5-fibroblast,fibroblast,EOC372,treatment-naive,sensitive,77,TRUE,
+TRUE_LABELS,S5-fibroblast,fibroblast,EOC443,treatment-naive,resistant,305,TRUE,
+TRUE_LABELS,S5-fibroblast,fibroblast,EOC540,treatment-naive,resistant,133,TRUE,
+TRUE_LABELS,S5-fibroblast,fibroblast,EOC733,treatment-naive,resistant,2,FALSE,fewer than 20 cells
+TRUE_LABELS,S5-fibroblast,fibroblast,EOC87,treatment-naive,resistant,40,TRUE,
+TRUE_LABELS,S5-macrophage,macrophage,EOC1005,treatment-naive,resistant,17,FALSE,fewer than 20 cells
+TRUE_LABELS,S5-macrophage,macrophage,EOC136,treatment-naive,sensitive,420,TRUE,
+TRUE_LABELS,S5-macrophage,macrophage,EOC153,treatment-naive,sensitive,274,TRUE,
+TRUE_LABELS,S5-macrophage,macrophage,EOC227,treatment-naive,sensitive,269,TRUE,
+TRUE_LABELS,S5-macrophage,macrophage,EOC3,treatment-naive,resistant,1294,TRUE,
+TRUE_LABELS,S5-macrophage,macrophage,EOC349,treatment-naive,resistant,14,FALSE,fewer than 20 cells
+TRUE_LABELS,S5-macrophage,macrophage,EOC372,treatment-naive,sensitive,5,FALSE,fewer than 20 cells
+TRUE_LABELS,S5-macrophage,macrophage,EOC443,treatment-naive,resistant,318,TRUE,
+TRUE_LABELS,S5-macrophage,macrophage,EOC540,treatment-naive,resistant,521,TRUE,
+TRUE_LABELS,S5-macrophage,macrophage,EOC733,treatment-naive,resistant,90,TRUE,
+TRUE_LABELS,S5-macrophage,macrophage,EOC87,treatment-naive,resistant,259,TRUE,
+TRUE_LABELS,S5-malignant,malignant,EOC1005,treatment-naive,resistant,487,TRUE,
+TRUE_LABELS,S5-malignant,malignant,EOC136,treatment-naive,sensitive,205,TRUE,
+TRUE_LABELS,S5-malignant,malignant,EOC153,treatment-naive,sensitive,330,TRUE,
+TRUE_LABELS,S5-malignant,malignant,EOC227,treatment-naive,sensitive,57,TRUE,
+TRUE_LABELS,S5-malignant,malignant,EOC3,treatment-naive,resistant,203,TRUE,
+TRUE_LABELS,S5-malignant,malignant,EOC349,treatment-naive,resistant,30,TRUE,
+TRUE_LABELS,S5-malignant,malignant,EOC372,treatment-naive,sensitive,281,TRUE,
+TRUE_LABELS,S5-malignant,malignant,EOC443,treatment-naive,resistant,1086,TRUE,
+TRUE_LABELS,S5-malignant,malignant,EOC540,treatment-naive,resistant,202,TRUE,
+TRUE_LABELS,S5-malignant,malignant,EOC733,treatment-naive,resistant,1550,TRUE,
+TRUE_LABELS,S5-malignant,malignant,EOC87,treatment-naive,resistant,136,TRUE,
+TRUE_LABELS,S5-Tcell,Tcell,EOC1005,treatment-naive,resistant,2157,TRUE,
+TRUE_LABELS,S5-Tcell,Tcell,EOC136,treatment-naive,sensitive,799,TRUE,
+TRUE_LABELS,S5-Tcell,Tcell,EOC153,treatment-naive,sensitive,245,TRUE,
+TRUE_LABELS,S5-Tcell,Tcell,EOC227,treatment-naive,sensitive,917,TRUE,
+TRUE_LABELS,S5-Tcell,Tcell,EOC3,treatment-naive,resistant,911,TRUE,
+TRUE_LABELS,S5-Tcell,Tcell,EOC349,treatment-naive,resistant,1004,TRUE,
+TRUE_LABELS,S5-Tcell,Tcell,EOC372,treatment-naive,sensitive,213,TRUE,
+TRUE_LABELS,S5-Tcell,Tcell,EOC443,treatment-naive,resistant,185,TRUE,
+TRUE_LABELS,S5-Tcell,Tcell,EOC540,treatment-naive,resistant,829,TRUE,
+TRUE_LABELS,S5-Tcell,Tcell,EOC733,treatment-naive,resistant,10,FALSE,fewer than 20 cells
+TRUE_LABELS,S5-Tcell,Tcell,EOC87,treatment-naive,resistant,681,TRUE,
+TRUE_LABELS,D4-PC,malignant,EOC1005,post-NACT,,418,FALSE,excluded by analysis definition
+TRUE_LABELS,D4-PC,malignant,EOC1005,treatment-naive,,487,FALSE,excluded by analysis definition
+TRUE_LABELS,D4-PC,malignant,EOC136,post-NACT,,2427,TRUE,
+TRUE_LABELS,D4-PC,malignant,EOC136,treatment-naive,,205,TRUE,
+TRUE_LABELS,D4-PC,malignant,EOC153,post-NACT,,116,TRUE,
+TRUE_LABELS,D4-PC,malignant,EOC153,treatment-naive,,330,TRUE,
+TRUE_LABELS,D4-PC,malignant,EOC227,post-NACT,,174,TRUE,
+TRUE_LABELS,D4-PC,malignant,EOC227,treatment-naive,,57,TRUE,
+TRUE_LABELS,D4-PC,malignant,EOC3,post-NACT,,223,FALSE,excluded by analysis definition
+TRUE_LABELS,D4-PC,malignant,EOC3,treatment-naive,,203,FALSE,excluded by analysis definition
+TRUE_LABELS,D4-PC,malignant,EOC349,post-NACT,,66,TRUE,
+TRUE_LABELS,D4-PC,malignant,EOC349,treatment-naive,,30,TRUE,
+TRUE_LABELS,D4-PC,malignant,EOC372,post-NACT,,131,TRUE,
+TRUE_LABELS,D4-PC,malignant,EOC372,treatment-naive,,281,TRUE,
+TRUE_LABELS,D4-PC,malignant,EOC443,post-NACT,,103,TRUE,
+TRUE_LABELS,D4-PC,malignant,EOC443,treatment-naive,,1086,TRUE,
+TRUE_LABELS,D4-PC,malignant,EOC540,post-NACT,,18,FALSE,fewer than 20 cells
+TRUE_LABELS,D4-PC,malignant,EOC540,treatment-naive,,202,FALSE,other timepoint excluded (unpaired)
+TRUE_LABELS,D4-PC,malignant,EOC733,post-NACT,,372,TRUE,
+TRUE_LABELS,D4-PC,malignant,EOC733,treatment-naive,,1550,TRUE,
+TRUE_LABELS,D4-PC,malignant,EOC87,post-NACT,,191,TRUE,
+TRUE_LABELS,D4-PC,malignant,EOC87,treatment-naive,,136,TRUE,
+TRUE_LABELS,D5a-PC,malignant,EOC1005,post-NACT,,418,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-PC,malignant,EOC1005,treatment-naive,,487,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-PC,malignant,EOC136,post-NACT,,2427,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-PC,malignant,EOC136,treatment-naive,,205,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-PC,malignant,EOC153,post-NACT,,116,TRUE,
+TRUE_LABELS,D5a-PC,malignant,EOC153,treatment-naive,,330,TRUE,
+TRUE_LABELS,D5a-PC,malignant,EOC227,post-NACT,,174,TRUE,
+TRUE_LABELS,D5a-PC,malignant,EOC227,treatment-naive,,57,TRUE,
+TRUE_LABELS,D5a-PC,malignant,EOC3,post-NACT,,223,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-PC,malignant,EOC3,treatment-naive,,203,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-PC,malignant,EOC349,post-NACT,,66,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-PC,malignant,EOC349,treatment-naive,,30,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-PC,malignant,EOC372,post-NACT,,131,TRUE,
+TRUE_LABELS,D5a-PC,malignant,EOC372,treatment-naive,,281,TRUE,
+TRUE_LABELS,D5a-PC,malignant,EOC443,post-NACT,,103,TRUE,
+TRUE_LABELS,D5a-PC,malignant,EOC443,treatment-naive,,1086,TRUE,
+TRUE_LABELS,D5a-PC,malignant,EOC540,post-NACT,,18,FALSE,fewer than 20 cells
+TRUE_LABELS,D5a-PC,malignant,EOC540,treatment-naive,,202,FALSE,other timepoint excluded (unpaired)
+TRUE_LABELS,D5a-PC,malignant,EOC733,post-NACT,,372,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-PC,malignant,EOC733,treatment-naive,,1550,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-PC,malignant,EOC87,post-NACT,,191,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-PC,malignant,EOC87,treatment-naive,,136,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC1005,post-NACT,resistant,54,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC1005,treatment-naive,resistant,133,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC136,post-NACT,sensitive,300,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC136,treatment-naive,sensitive,904,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC153,post-NACT,sensitive,441,TRUE,
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC153,treatment-naive,sensitive,91,TRUE,
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC227,post-NACT,sensitive,13,FALSE,fewer than 20 cells
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC227,treatment-naive,sensitive,7,FALSE,fewer than 20 cells
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC3,post-NACT,resistant,260,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC3,treatment-naive,resistant,57,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC349,post-NACT,resistant,1,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC349,treatment-naive,resistant,25,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC372,post-NACT,sensitive,2106,TRUE,
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC372,treatment-naive,sensitive,77,TRUE,
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC443,post-NACT,resistant,197,TRUE,
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC443,treatment-naive,resistant,305,TRUE,
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC540,post-NACT,resistant,358,TRUE,
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC540,treatment-naive,resistant,133,TRUE,
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC733,post-NACT,resistant,15,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC733,treatment-naive,resistant,2,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC87,post-NACT,resistant,141,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-CAF,fibroblast,EOC87,treatment-naive,resistant,40,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-mal,malignant,EOC1005,post-NACT,resistant,418,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-mal,malignant,EOC1005,treatment-naive,resistant,487,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-mal,malignant,EOC136,post-NACT,sensitive,2427,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-mal,malignant,EOC136,treatment-naive,sensitive,205,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-mal,malignant,EOC153,post-NACT,sensitive,116,TRUE,
+TRUE_LABELS,D5a-S4-mal,malignant,EOC153,treatment-naive,sensitive,330,TRUE,
+TRUE_LABELS,D5a-S4-mal,malignant,EOC227,post-NACT,sensitive,174,TRUE,
+TRUE_LABELS,D5a-S4-mal,malignant,EOC227,treatment-naive,sensitive,57,TRUE,
+TRUE_LABELS,D5a-S4-mal,malignant,EOC3,post-NACT,resistant,223,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-mal,malignant,EOC3,treatment-naive,resistant,203,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-mal,malignant,EOC349,post-NACT,resistant,66,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-mal,malignant,EOC349,treatment-naive,resistant,30,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-mal,malignant,EOC372,post-NACT,sensitive,131,TRUE,
+TRUE_LABELS,D5a-S4-mal,malignant,EOC372,treatment-naive,sensitive,281,TRUE,
+TRUE_LABELS,D5a-S4-mal,malignant,EOC443,post-NACT,resistant,103,TRUE,
+TRUE_LABELS,D5a-S4-mal,malignant,EOC443,treatment-naive,resistant,1086,TRUE,
+TRUE_LABELS,D5a-S4-mal,malignant,EOC540,post-NACT,resistant,18,FALSE,fewer than 20 cells
+TRUE_LABELS,D5a-S4-mal,malignant,EOC540,treatment-naive,resistant,202,FALSE,other timepoint excluded (unpaired)
+TRUE_LABELS,D5a-S4-mal,malignant,EOC733,post-NACT,resistant,372,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-mal,malignant,EOC733,treatment-naive,resistant,1550,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-mal,malignant,EOC87,post-NACT,resistant,191,FALSE,outside restricted patient set
+TRUE_LABELS,D5a-S4-mal,malignant,EOC87,treatment-naive,resistant,136,FALSE,outside restricted patient set
+TRUE_LABELS,D5b-P1,fibroblast,EOC1005,treatment-naive,resistant,133,TRUE,
+TRUE_LABELS,D5b-P1,fibroblast,EOC136,treatment-naive,sensitive,904,TRUE,
+TRUE_LABELS,D5b-P1,fibroblast,EOC153,treatment-naive,sensitive,91,TRUE,
+TRUE_LABELS,D5b-P1,fibroblast,EOC227,treatment-naive,sensitive,7,FALSE,fewer than 20 cells
+TRUE_LABELS,D5b-P1,fibroblast,EOC3,treatment-naive,resistant,57,TRUE,
+TRUE_LABELS,D5b-P1,fibroblast,EOC349,treatment-naive,resistant,25,TRUE,
+TRUE_LABELS,D5b-P1,fibroblast,EOC372,treatment-naive,sensitive,77,TRUE,
+TRUE_LABELS,D5b-P1,fibroblast,EOC443,treatment-naive,resistant,305,TRUE,
+TRUE_LABELS,D5b-P1,fibroblast,EOC540,treatment-naive,resistant,133,TRUE,
+TRUE_LABELS,D5b-P1,fibroblast,EOC733,treatment-naive,resistant,2,FALSE,fewer than 20 cells
+TRUE_LABELS,D5b-P1,fibroblast,EOC87,treatment-naive,resistant,40,TRUE,
+TRUE_LABELS,D5b-P2,malignant,EOC1005,treatment-naive,resistant,487,TRUE,
+TRUE_LABELS,D5b-P2,malignant,EOC136,treatment-naive,sensitive,205,TRUE,
+TRUE_LABELS,D5b-P2,malignant,EOC153,treatment-naive,sensitive,330,TRUE,
+TRUE_LABELS,D5b-P2,malignant,EOC227,treatment-naive,sensitive,57,TRUE,
+TRUE_LABELS,D5b-P2,malignant,EOC3,treatment-naive,resistant,203,TRUE,
+TRUE_LABELS,D5b-P2,malignant,EOC349,treatment-naive,resistant,30,TRUE,
+TRUE_LABELS,D5b-P2,malignant,EOC372,treatment-naive,sensitive,281,TRUE,
+TRUE_LABELS,D5b-P2,malignant,EOC443,treatment-naive,resistant,1086,TRUE,
+TRUE_LABELS,D5b-P2,malignant,EOC540,treatment-naive,resistant,202,TRUE,
+TRUE_LABELS,D5b-P2,malignant,EOC733,treatment-naive,resistant,1550,TRUE,
+TRUE_LABELS,D5b-P2,malignant,EOC87,treatment-naive,resistant,136,TRUE,

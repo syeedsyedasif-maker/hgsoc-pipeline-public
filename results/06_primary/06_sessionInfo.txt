@@ -1,0 +1,39 @@
+R version 4.3.1 (2023-06-16)
+Platform: x86_64-conda-linux-gnu (64-bit)
+Running under: Ubuntu 24.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: /userhome/conda/envs/hgsoc_pipeline/lib/libopenblasp-r0.3.33.so;  LAPACK version 3.12.0
+
+locale:
+ [1] LC_CTYPE=en_GB.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_GB.UTF-8        LC_COLLATE=en_GB.UTF-8    
+ [5] LC_MONETARY=en_GB.UTF-8    LC_MESSAGES=en_GB.UTF-8   
+ [7] LC_PAPER=en_GB.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_GB.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Europe/London
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats4    stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+ [1] yaml_2.3.10                 Matrix_1.6-5               
+ [3] jsonlite_2.0.0              data.table_1.17.8          
+ [5] edgeR_4.0.16                limma_3.58.1               
+ [7] SingleCellExperiment_1.24.0 SummarizedExperiment_1.32.0
+ [9] Biobase_2.62.0              GenomicRanges_1.54.1       
+[11] GenomeInfoDb_1.38.1         IRanges_2.36.0             
+[13] S4Vectors_0.40.2            BiocGenerics_0.48.1        
+[15] MatrixGenerics_1.14.0       matrixStats_1.5.0          
+
+loaded via a namespace (and not attached):
+ [1] crayon_1.5.3            DelayedArray_0.28.0     statmod_1.5.0          
+ [4] RCurl_1.98-1.16         locfit_1.5-9.12         grid_4.3.1             
+ [7] abind_1.4-5             bitops_1.0-9            compiler_4.3.1         
+[10] Rcpp_1.1.0              XVector_0.42.0          lattice_0.22-7         
+[13] SparseArray_1.2.2       GenomeInfoDbData_1.2.11 tools_4.3.1            
+[16] zlibbioc_1.48.0         S4Arrays_1.2.0         
