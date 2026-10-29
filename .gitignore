@@ -46,3 +46,6 @@ Thumbs.db
 
 # ---- scratch (temporary diagnostic scripts like _diag.R) ----
 _*.R
+
+# ---- write-up evidence bundle (regenerable by tools/collect_writeup_state.sh) ----
+writeup_bundle/

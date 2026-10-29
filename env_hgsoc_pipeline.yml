@@ -51,6 +51,7 @@ dependencies:
   - bioconductor-singlecellexperiment=1.24.0
   - bioconductor-sparsearray=1.2.2
   - bioconductor-sparsematrixstats=1.14.0
+  - bioconductor-speckle=1.2.0
   - bioconductor-splatter=1.26.0
   - bioconductor-summarizedexperiment=1.32.0
   - bioconductor-xvector=0.42.0
