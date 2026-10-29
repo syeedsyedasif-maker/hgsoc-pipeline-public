@@ -115,3 +115,21 @@ harmonize_bulk_to_symbols <- function(bulk_mat) {
   # counts, not dropping -- preserves total signal instead of arbitrary discard.
   rowsum(bulk_mat, group = sym)
 }
+
+# ---- pseudobulk: sum raw counts per group of cells (stage 06) ----------------
+# `cells` = logical/integer index into the SCE; `by` = colData columns that
+# define one pseudobulk sample. Stays sparse until the (small) genes x samples
+# result. Returns list(counts = genes x samples matrix, meta = data.frame with
+# the `by` columns + n_cells, one row per pseudobulk column, same order).
+pseudobulk_counts <- function(sce, cells, by = c("patient_id", "treatment_phase")) {
+  cd  <- as.data.frame(SummarizedExperiment::colData(sce))[cells, by, drop = FALSE]
+  key <- factor(do.call(paste, c(cd, sep = "||")))
+  ind <- Matrix::sparseMatrix(i = seq_along(key), j = as.integer(key), x = 1,
+                              dims = c(length(key), nlevels(key)),
+                              dimnames = list(NULL, levels(key)))
+  pb  <- as.matrix(SummarizedExperiment::assay(sce, "counts")[, cells, drop = FALSE] %*% ind)
+  meta <- cd[match(levels(key), as.character(key)), , drop = FALSE]
+  meta$n_cells <- as.integer(table(key)[levels(key)])
+  rownames(meta) <- levels(key)
+  list(counts = pb, meta = meta)
+}

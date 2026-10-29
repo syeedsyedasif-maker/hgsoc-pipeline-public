@@ -187,3 +187,25 @@ real:
   # will not necessarily hit the splatter-tuned 0.70 bar), and only then
   # decide -- with a one-line justification tied to the observed number --
   # whether this profile's threshold should differ from `default`'s.
+
+  # ---- Stage 06: primary resistant-vs-sensitive analysis ----------------------
+  # Every value below is quoted from docs/ANALYSIS_PLAN.md v1.1 or DEVIATIONS.md;
+  # see docs/primary_spec.md for the item-by-item mapping and open ambiguities.
+  primary:
+    input_sce:    data/sce_clustered.rds          # spec A12
+    labels:       metadata/gse165897_labels.csv
+    sample_flags: metadata/gse165897_sample_flags.csv
+    genesets:     cisplatin_response_genes_HGSOC.json
+    out_dir:      results/06_primary
+    min_cells: 20                 # plan s3
+    min_patients_per_group: 3     # plan s3
+    min_set_genes: 5              # plan s3 (positive control exempt)
+    alpha: 0.05                   # plan s4
+    p1_set: cheon2014_collagen          # plan s4 + deviation 1
+    p2_set: resistance_up_intrinsic     # plan s4 + deviation 2
+    pc_set: stress_IEG_state_GSE165897  # plan s5
+    s3_sets: [drug_efflux, extrinsic_TME]               # plan s6.3
+    s3_populations: [malignant, fibroblast, macrophage] # plan s6.3
+    genelevel_only_sets: [matrix_CAF, sensitivity_up, partial_EMT_Xu2022]  # plan s6.3 / deviation 3
+    freezing_discordant: [EOC1005, EOC3]                      # D4
+    site_matched: [EOC153, EOC227, EOC372, EOC443, EOC540]    # D5(a)
