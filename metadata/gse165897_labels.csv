@@ -1,12 +1,12 @@
 patient_id,pfi_days,crs,pfi_group,crs_group,source
-EOC3,14,2,resistant,,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
-EOC87,30,1,resistant,,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
-EOC349,36,2,resistant,,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
-EOC1005,65,2,resistant,,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
-EOC733,83,1,resistant,,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
-EOC540,126,2,resistant,,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
-EOC443,177,3,resistant,,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
-EOC227,230,2,sensitive,,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
-EOC153,393,2,sensitive,,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
-EOC372,460,1,sensitive,,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
-EOC136,520,2,sensitive,,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC3,14,2,resistant,response,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC87,30,1,resistant,poor_response,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC349,36,2,resistant,response,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC1005,65,2,resistant,response,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC733,83,1,resistant,poor_response,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC540,126,2,resistant,response,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC443,177,3,resistant,response,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC227,230,2,sensitive,response,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC153,393,2,sensitive,response,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC372,460,1,sensitive,poor_response,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
+EOC136,520,2,sensitive,response,Zhang et al. 2022 Sci Adv 8:eabm1831 Table 1
